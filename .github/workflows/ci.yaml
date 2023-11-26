@@ -1,0 +1,60 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v4
+        with:
+          go-version-file: go.mod
+
+      - uses: golangci/golangci-lint-action@v3
+
+      - run: make lint
+      - run: make test
+      - run: make bench
+
+  # only create a new tag/release on main builds:
+  release:
+    if: github.ref == 'refs/heads/main'
+    needs: [test]
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code with full history (unshallow)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+
+      - uses: actions/setup-go@v4
+        with:
+          go-version-file: go.mod
+
+      - name: install autotag binary
+        run: |
+          curl -sL https://git.io/autotag-install | sudo sh -s -- -b /usr/local/bin
+
+      - name: increment tag and create release
+      run: |
+        set -eou pipefail
+
+        new_version=$(autotag -vn)
+        gh release create v"${new_version}" --target main --title "v${new_version}" --generate-notes
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

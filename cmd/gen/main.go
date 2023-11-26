@@ -26,6 +26,8 @@ var cloudRanges = []rangeEntry{
 
 const footer = `}`
 
+// Structs to hold the JSON data published by AWS and GCP:
+
 // AWSIPData represents the structure of the JSON data from AWS.
 type AWSIPData struct {
 	SyncToken    string      `json:"syncToken"`
@@ -39,8 +41,8 @@ type AWSPrefix struct {
 	IPPrefix           string `json:"ip_prefix"`
 	IPv6Prefix         string `json:"ipv6_prefix"`
 	Region             string `json:"region"`
-	Service            string `json:"service"`
-	NetworkBorderGroup string `json:"network_border_group"`
+	Service            string `json:"service"`              // currently ignored
+	NetworkBorderGroup string `json:"network_border_group"` // currently ignored
 }
 
 // GCPIPData represents the structure of the JSON data from AWS.
@@ -54,8 +56,8 @@ type GCPIPData struct {
 type GCPPrefix struct {
 	IPPrefix   string `json:"ipv4Prefix"`
 	IPv6Prefix string `json:"ipv6Prefix"`
-	Scope      string `json:"scope"` // scope is region
-	Service    string `json:"service"`
+	Scope      string `json:"scope"`   // scope is the region on GCP
+	Service    string `json:"service"` // currently ignored, and it's always the same 'Google Cloud Platform' anyway
 }
 
 func main() {
