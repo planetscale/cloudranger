@@ -6,7 +6,7 @@ import (
 	"github.com/infobloxopen/go-trees/iptree"
 )
 
-type cloudRanger struct {
+type CloudRanger struct {
 	tree *iptree.Tree
 }
 
@@ -17,19 +17,19 @@ type IPInfo struct {
 }
 
 // New returns a new cloudRanger.
-func New() *cloudRanger {
+func New() *CloudRanger {
 	tree := iptree.NewTree()
 	for _, r := range cloudRanges {
 		tree.InplaceInsertNet(r.net, r.info)
 	}
-	return &cloudRanger{
+	return &CloudRanger{
 		tree: tree,
 	}
 }
 
 // GetIP returns the IPInfo for the given IP address. If the IP address is not
 // found in any of the known cloud providers the second return value is false.
-func (cr *cloudRanger) GetIP(ip string) (IPInfo, bool) {
+func (cr *CloudRanger) GetIP(ip string) (IPInfo, bool) {
 	addr := net.ParseIP(ip)
 	if addr == nil {
 		return IPInfo{}, false
