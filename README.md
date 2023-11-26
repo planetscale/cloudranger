@@ -6,6 +6,8 @@ It functions without any external runtime dependencies, as IP range data is stor
 
 New releases are automatically created in response to updates in cloud providers' IP range information. This process, facilitated through GitHub Actions, is executed weekly to ensure the library remains up-to-date.
 
+Inspiration for this library came from https://github.com/kubernetes/registry.k8s.io which contains a similar library used by the Kubernetes OCI registry to redirect requests to the appropriate cloud provider. `coderanger` was created as a means to have a standalone library that can be used in other projects and with greater control for our own use cases. That project also uses its own trie implementation whereas this library depends on `github.com/infobloxopen/go-trees`. I have not benchmarked the two implementations, but I suspect they are comparable.
+
 ## Usage
 
 ```sh
