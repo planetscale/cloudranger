@@ -51,10 +51,10 @@ jobs:
           curl -sL https://git.io/autotag-install | sudo sh -s -- -b /usr/local/bin
 
       - name: increment tag and create release
-      run: |
-        set -eou pipefail
+        run: |
+          set -eou pipefail
 
-        new_version=$(autotag -vn)
-        gh release create v"${new_version}" --target main --title "v${new_version}" --generate-notes
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          new_version=$(autotag -vn)
+          gh release create v"${new_version}" --target main --title "v${new_version}" --generate-notes
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
