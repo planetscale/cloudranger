@@ -10,3 +10,5 @@ bench:
 gen:
 	./scripts/fetch-data.sh
 	go run ./cmd/gen
+
+.PHONY: lint test bench gen
