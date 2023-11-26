@@ -1,0 +1,100 @@
+name: update cloud provider IP ranges
+
+on:
+  # run weekly:
+  schedule:
+    - cron: '27 3 * * 1' # 3:27am every Monday (UTC)
+  # run on-demand via manual triggering:
+  workflow_dispatch:
+
+jobs:
+  generate:
+    permissions:
+      contents: 'write'      # allow creating a branch and pushing commits
+      pull-requests: 'write' # allow opening PRs
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Setup Go
+        uses: actions/setup-go@93397bea11091df50f3d7e59dc26a7711a8bcfbe # v4
+        with:
+          go-version-file: go.mod
+
+      - name: update-data
+        id: generate
+        run: |
+          make gen
+
+          if git diff --exit-code; then
+            echo "==> No changes detected."
+            echo "dirty=false" >>"$GITHUB_OUTPUT"
+          else
+            echo "dirty=true" >>"$GITHUB_OUTPUT"
+          fi
+
+      # # Create a branch and open a PR if there are changes
+      - if: steps.generate.outputs.dirty == 'true'
+        name: Create branch
+        id: create-branch
+        run: |
+          TIMESTAMP=$(date +%F_%H%M)
+          BRANCH_NAME=update-data/$TIMESTAMP
+
+          echo "branch=$BRANCH_NAME" >>"$GITHUB_OUTPUT"
+          echo "timestamp=$TIMESTAMP" >>"$GITHUB_OUTPUT"
+
+          git checkout -b "$BRANCH_NAME"
+
+      - if: steps.generate.outputs.dirty == 'true'
+        name: Push branch
+        uses: ad-m/github-push-action@d91a481090679876dfc4178fef17f286781251df # v0.8.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ steps.create-branch.outputs.branch }}
+
+      - if: steps.generate.outputs.dirty == 'true'
+        name: Commit any changes
+        uses: planetscale/ghcommit-action@5cd5ba8c2ef5c6e6d90f856d36e700fb79183e68 # v0.1.19
+        with:
+          commit_message: 🤖 upate cloud provider IP ranges ${{ steps.create-branch.outputs.timestamp }}
+          repo: ${{ github.repository }}
+          branch: ${{ steps.create-branch.outputs.branch }}
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - if: steps.generate.outputs.dirty == 'true'
+        name: Open pull request
+        run: |
+          label="bot/update-data-pr"
+
+          # close any existing PRs with the same label:
+          for i in $(gh pr list -l "$label" --state open --json number --jq '.[].number'); do
+            gh pr close "$i" -d -c "superseded by newer PR"
+          done
+
+          gh pr create \
+            --title '🤖 update cloud provider IP ranges ${{ steps.create-branch.outputs.timestamp }}' \
+            --body "This PR was opened automatically by the 'update-data.yaml' GHA workflow" \
+            --head "${{ steps.create-branch.outputs.branch }}" \
+            --label "$label" \
+            --base main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # open/update an issue if a scheduled workflow fails
+  notify:
+    name: open issue on failed workflow
+    needs: generate
+    if: failure() && github.event.pull_request == null
+    runs-on: [self-hosted, ubuntu-latest]
+    steps:
+      - uses: jayqi/failed-build-issue-action@2b65b51beb43fb69454852d19bbd62fb0a50bdb2 # v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          label-name: bot/update-data-fail
