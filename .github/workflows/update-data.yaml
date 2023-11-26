@@ -26,7 +26,7 @@ jobs:
         with:
           go-version-file: go.mod
 
-      - name: update-data
+      - name: make gen
         id: generate
         run: |
           make gen
@@ -96,7 +96,7 @@ jobs:
     name: open issue on failed workflow
     needs: generate
     if: failure() && github.event.pull_request == null
-    runs-on: [self-hosted, ubuntu-latest]
+    runs-on: ubuntu-latest
     steps:
       - uses: jayqi/failed-build-issue-action@2b65b51beb43fb69454852d19bbd62fb0a50bdb2 # v1
         with:
