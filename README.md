@@ -38,6 +38,16 @@ make test
 make bench
 ```
 
+```
+goos: linux
+goarch: amd64
+pkg: github.com/planetscale/cloudranger
+cpu: AMD EPYC 7B12
+
+BenchmarkNew-16              396           3153591 ns/op         1084213 B/op      26089 allocs/op
+BenchmarkGetIP-16        6268292               194.8 ns/op            64 B/op          2 allocs/op
+```
+
 ## Updates
 
 A GitHub Actions workflow is run weekly to update the IP range data if changed by the supported cloud providers. A new version is created and tagged if changes are detected. Use dependabot or renovate to automate updates to the latest version.
