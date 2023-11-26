@@ -31,7 +31,11 @@ jobs:
         run: |
           make gen
 
-          if git diff --exit-code; then
+          # NOTE: we only diff against the generated file, not the entire repo,
+          #       because some providers (GCP) update the timestamp in the JSON
+          #       file even if the IP ranges haven't changed.
+
+          if git diff --exit-code "./zz_generated.go"; then
             echo "==> No changes detected."
             echo "dirty=false" >>"$GITHUB_OUTPUT"
           else
