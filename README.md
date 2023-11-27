@@ -52,4 +52,9 @@ BenchmarkGetIP-16        6268292               194.8 ns/op            64 B/op   
 
 ## IP Range Database Updates
 
+IP range data is sourced from:
+
+- AWS: https://ip-ranges.amazonaws.com/ip-ranges.json
+- GCP: https://www.gstatic.com/ipranges/cloud.json
+
 A GitHub Actions workflow is run weekly to update the IP range data if changed by the supported cloud providers. A new version is created and tagged if changes are detected. Use dependabot or renovate to automate updates to the latest version.
