@@ -64,7 +64,7 @@ jobs:
 
       - if: steps.generate.outputs.dirty == 'true'
         name: Commit any changes
-        uses: planetscale/ghcommit-action@a7991c4aead02ef68ef7ac3d8f33a05802bc76a6 # v0.1.22
+        uses: planetscale/ghcommit-action@49cd42450bc7ace7fcb9dcb79d13b592b8db7777 # v0.1.23
         with:
           commit_message: 🤖 upate cloud provider IP ranges ${{ steps.create-branch.outputs.timestamp }}
           repo: ${{ github.repository }}
