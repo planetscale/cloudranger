@@ -2,5 +2,13 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "local>planetscale/renovate-config"
+  ],
+  "packageRules": [
+     {
+      "description": "Disable updating minimum Go version, this is a library",
+      "matchManagers": ["gomod"],
+      "matchDepTypes": ["golang"],
+      "enabled": false
+    }
   ]
 }

@@ -1,6 +1,6 @@
 module github.com/planetscale/cloudranger
 
-go 1.21.5
+go 1.20
 
 require (
 	github.com/infobloxopen/go-trees v0.0.0-20221216143356-66ceba885ebc
