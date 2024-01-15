@@ -39,6 +39,12 @@ jobs:
     needs: [test]
     runs-on: ubuntu-latest
     steps:
+      - name: checkout code with full history (unshallow)
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+
       # only generate a new release if certain files change:
       - uses: dorny/paths-filter@v2
         id: filter
@@ -48,13 +54,6 @@ jobs:
               - '**.go'
               - 'go.mod'
               - 'go.sum'
-
-      - name: checkout code with full history (unshallow)
-        if: steps.filter.outputs.app == 'true'
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
-        with:
-          fetch-depth: 0
-          fetch-tags: true
 
       - uses: actions/setup-go@0c52d547c9bc32b1aa3301fd7a9cb496313a4491 # v5
         if: steps.filter.outputs.app == 'true'
