@@ -39,21 +39,35 @@ jobs:
     needs: [test]
     runs-on: ubuntu-latest
     steps:
+      # only generate a new release if certain files change:
+      - uses: dorny/paths-filter@v2
+        id: filter
+        with:
+          filters: |
+            app:
+              - '**.go'
+              - 'go.mod'
+              - 'go.sum'
+
       - name: checkout code with full history (unshallow)
+        if: steps.filter.outputs.app == 'true'
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
         with:
           fetch-depth: 0
           fetch-tags: true
 
       - uses: actions/setup-go@0c52d547c9bc32b1aa3301fd7a9cb496313a4491 # v5
+        if: steps.filter.outputs.app == 'true'
         with:
           go-version-file: go.mod
 
       - name: install autotag binary
+        if: steps.filter.outputs.app == 'true'
         run: |
           curl -sL https://git.io/autotag-install | sudo sh -s -- -b /usr/local/bin
 
       - name: increment tag and create release
+        if: steps.filter.outputs.app == 'true'
         run: |
           set -eou pipefail
 
