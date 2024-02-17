@@ -98,7 +98,7 @@ jobs:
     if: failure() && github.event.pull_request == null
     runs-on: ubuntu-latest
     steps:
-      - uses: jayqi/failed-build-issue-action@2b65b51beb43fb69454852d19bbd62fb0a50bdb2 # v1
+      - uses: jayqi/failed-build-issue-action@1a893bbf43ef1c2a8705e2b115cd4f0fe3c5649b # v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           label-name: bot/update-data-fail
