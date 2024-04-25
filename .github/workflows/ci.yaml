@@ -27,7 +27,7 @@ jobs:
         with:
           go-version: ${{ matrix.go-version }}
 
-      - uses: golangci/golangci-lint-action@d6238b002a20823d52840fda27e2d4891c5952dc # v4
+      - uses: golangci/golangci-lint-action@82d40c283aeb1f2b6595839195e95c2d6a49081b # v5
 
       - run: make lint
       - run: make test
