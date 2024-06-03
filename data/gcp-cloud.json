@@ -1,6 +1,6 @@
 {
-  "syncToken": "1716775746177",
-  "creationTime": "2024-05-26T19:09:06.177812",
+  "syncToken": "1717358828303",
+  "creationTime": "2024-06-02T13:07:08.303385",
   "prefixes": [{
     "ipv4Prefix": "34.35.0.0/16",
     "service": "Google Cloud",
@@ -482,6 +482,10 @@
     "service": "Google Cloud",
     "scope": "asia-southeast1"
   }, {
+    "ipv4Prefix": "34.1.192.0/20",
+    "service": "Google Cloud",
+    "scope": "asia-southeast1"
+  }, {
     "ipv4Prefix": "34.21.128.0/17",
     "service": "Google Cloud",
     "scope": "asia-southeast1"
@@ -723,6 +727,10 @@
     "scope": "australia-southeast1"
   }, {
     "ipv4Prefix": "34.0.16.0/20",
+    "service": "Google Cloud",
+    "scope": "australia-southeast2"
+  }, {
+    "ipv4Prefix": "34.1.176.0/20",
     "service": "Google Cloud",
     "scope": "australia-southeast2"
   }, {
