@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
         with:
           ref: ${{ github.head_ref }}
 
@@ -64,7 +64,7 @@ jobs:
 
       - if: steps.generate.outputs.dirty == 'true'
         name: Commit any changes
-        uses: planetscale/ghcommit-action@84c52a5164423e2cd66371ecae81d9049a2cf105 # v0.1.41
+        uses: planetscale/ghcommit-action@e1599c54d850c63ee45f5456a2ac741f49cfed01 # v0.1.42
         with:
           commit_message: 🤖 upate cloud provider IP ranges ${{ steps.create-branch.outputs.timestamp }}
           repo: ${{ github.repository }}
