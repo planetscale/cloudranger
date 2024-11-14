@@ -32,6 +32,14 @@ func main() {
 }
 ```
 
+A small cli is included in [cmd/cloudranger](cmd/cloudranger). It is EXPERIMENTAL and its behavior, flags, and output is likely to change.
+
+```sh
+$ go run cmd/cloudranger/main.go 3.5.140.101
+
+{"cloud":"AWS","region":"ap-northeast-2"}
+```
+
 ## Testing and Benchmarks
 
 ```sh

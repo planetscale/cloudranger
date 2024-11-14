@@ -1,0 +1,40 @@
+name: create release assets
+
+on:
+  push:
+    branches:
+      - main
+    # limit when we create a release by the files changed:
+    paths:
+      - go.mod
+      - go.sum
+      - '**.go'
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      packages: write
+
+    steps:
+      - name: checkout code with full history (unshallow)
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: install autotag binary
+        run: |
+          curl -sL https://git.io/autotag-install | sh -s -- -b "${RUNNER_TEMP}/bin"
+
+      - name: increment tag and create release
+        run: |
+          set -eou pipefail
+
+          new_version=$(autotag -vn)
+          gh release create v"${new_version}" --target main --title "v${new_version}" --generate-notes
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
