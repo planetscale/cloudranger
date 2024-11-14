@@ -29,6 +29,7 @@ jobs:
       - name: install autotag binary
         run: |
           curl -sL https://git.io/autotag-install | sh -s -- -b "${RUNNER_TEMP}/bin"
+          echo "${RUNNER_TEMP}/bin" >> $GITHUB_PATH
 
       - name: increment tag and create release
         run: |
