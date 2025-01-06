@@ -20,6 +20,7 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
           ref: ${{ github.head_ref }}
+          persist-credentials: false
 
       - name: Setup Go
         uses: actions/setup-go@3041bf56c941b39c61721a86cd11f3bb1338122a # v5
@@ -66,7 +67,7 @@ jobs:
         name: Commit any changes
         uses: planetscale/ghcommit-action@d4176bfacef926cc2db351eab20398dfc2f593b5 # v0.2.0
         with:
-          commit_message: 🤖 upate cloud provider IP ranges ${{ steps.create-branch.outputs.timestamp }}
+          commit_message: 🤖 update cloud provider IP ranges ${{ steps.create-branch.outputs.timestamp }}
           repo: ${{ github.repository }}
           branch: ${{ steps.create-branch.outputs.branch }}
         env:
