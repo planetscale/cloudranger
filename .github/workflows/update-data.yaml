@@ -23,7 +23,7 @@ jobs:
           persist-credentials: false
 
       - name: Setup Go
-        uses: actions/setup-go@3041bf56c941b39c61721a86cd11f3bb1338122a # v5
+        uses: actions/setup-go@f111f3307d8850f501ac008e886eec1fd1932a34 # v5
         with:
           go-version-file: go.mod
 
@@ -65,7 +65,7 @@ jobs:
 
       - if: steps.generate.outputs.dirty == 'true'
         name: Commit any changes
-        uses: planetscale/ghcommit-action@416d8ba8b8e04c703961e9a61f6b18a902c9428c # v0.2.3
+        uses: planetscale/ghcommit-action@8b5326f64dc06b38a4d0f69d34b4ea931ad2cf66 # v0.2.4
         with:
           commit_message: 🤖 update cloud provider IP ranges ${{ steps.create-branch.outputs.timestamp }}
           repo: ${{ github.repository }}
