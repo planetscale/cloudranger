@@ -25,7 +25,7 @@ func TestGetIP(t *testing.T) {
 		},
 		{
 			name:           "valid IPv6 address in Amazon Web Services",
-			ip:             "2a05:d077:6081::1",
+			ip:             "2a05:d059:6000::1",
 			expectedCloud:  "AWS",
 			expectedRegion: "eu-north-1",
 			found:          true,

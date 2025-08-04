@@ -65,7 +65,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	defer out.Close()
+	defer out.Close() //nolint:errcheck
 
 	_, err = io.WriteString(out, header)
 	if err != nil {
@@ -91,8 +91,8 @@ func main() {
 			if err != nil {
 				log.Fatal(err)
 			}
-			fmt.Fprintf(out, "\t// AWS: %s, region: %s\n", prefix.IPPrefix, prefix.Region)
-			fmt.Fprintf(out,
+			fmt.Fprintf(out, "\t// AWS: %s, region: %s\n", prefix.IPPrefix, prefix.Region) //nolint:errcheck
+			fmt.Fprintf(out,                                                               //nolint:errcheck
 				"\t{&net.IPNet{IP: []byte{%d, %d, %d, %d}, Mask: []byte{%d, %d, %d, %d}}, IPInfo{cloud: \"AWS\", region: \"%s\"}},\n",
 				ipnet.IP[0], ipnet.IP[1], ipnet.IP[2], ipnet.IP[3],
 				ipnet.Mask[0], ipnet.Mask[1], ipnet.Mask[2], ipnet.Mask[3],
@@ -107,8 +107,8 @@ func main() {
 			}
 			i := ipnet.IP
 			m := ipnet.Mask
-			fmt.Fprintf(out, "\t// AWS: %s, region: %s\n", prefix.IPv6Prefix, prefix.Region)
-			fmt.Fprintf(out,
+			fmt.Fprintf(out, "\t// AWS: %s, region: %s\n", prefix.IPv6Prefix, prefix.Region) //nolint:errcheck
+			fmt.Fprintf(out,                                                                 //nolint:errcheck
 				"\t{&net.IPNet{IP: []byte{%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d}, Mask: []byte{%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d}}, IPInfo{cloud: \"AWS\", region: \"%s\"}},\n",
 				i[0], i[1], i[2], i[3], i[4], i[5], i[6], i[7], i[8], i[9], i[10], i[11], i[12], i[13], i[14], i[15],
 				m[0], m[1], m[2], m[3], m[4], m[5], m[6], m[7], m[8], m[9], m[10], m[11], m[12], m[13], m[14], m[15],
@@ -137,8 +137,8 @@ func main() {
 				if err != nil {
 					log.Fatal(err)
 				}
-				fmt.Fprintf(out, "\t// GCP: %s, region: %s\n", prefix.IPPrefix, prefix.Scope)
-				fmt.Fprintf(out,
+				fmt.Fprintf(out, "\t// GCP: %s, region: %s\n", prefix.IPPrefix, prefix.Scope) //nolint:errcheck
+				fmt.Fprintf(out,                                                              //nolint:errcheck
 					"\t{&net.IPNet{IP: []byte{%d, %d, %d, %d}, Mask: []byte{%d, %d, %d, %d}}, IPInfo{cloud: \"GCP\", region: \"%s\"}},\n",
 					ipnet.IP[0], ipnet.IP[1], ipnet.IP[2], ipnet.IP[3],
 					ipnet.Mask[0], ipnet.Mask[1], ipnet.Mask[2], ipnet.Mask[3],
@@ -153,8 +153,8 @@ func main() {
 				}
 				i := ipnet.IP
 				m := ipnet.Mask
-				fmt.Fprintf(out, "\t// GCP: %s, region: %s\n", prefix.IPv6Prefix, prefix.Scope)
-				fmt.Fprintf(out,
+				fmt.Fprintf(out, "\t// GCP: %s, region: %s\n", prefix.IPv6Prefix, prefix.Scope) //nolint:errcheck
+				fmt.Fprintf(out,                                                                //nolint:errcheck
 					"\t{&net.IPNet{IP: []byte{%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d}, Mask: []byte{%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d}}, IPInfo{cloud: \"GCP\", region: \"%s\"}},\n",
 					i[0], i[1], i[2], i[3], i[4], i[5], i[6], i[7], i[8], i[9], i[10], i[11], i[12], i[13], i[14], i[15],
 					m[0], m[1], m[2], m[3], m[4], m[5], m[6], m[7], m[8], m[9], m[10], m[11], m[12], m[13], m[14], m[15],
