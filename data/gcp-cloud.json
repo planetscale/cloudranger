@@ -1,6 +1,6 @@
 {
-  "syncToken": "1763345235740",
-  "creationTime": "2025-11-16T18:07:15.740739",
+  "syncToken": "1763949919062",
+  "creationTime": "2025-11-23T18:05:19.062904",
   "prefixes": [{
     "ipv4Prefix": "34.1.208.0/20",
     "service": "Google Cloud",
@@ -341,6 +341,10 @@
     "ipv6Prefix": "2600:1902:50::/44",
     "service": "Google Cloud",
     "scope": "asia-northeast2"
+  }, {
+    "ipv4Prefix": "8.228.128.0/18",
+    "service": "Google Cloud",
+    "scope": "asia-northeast3"
   }, {
     "ipv4Prefix": "34.0.96.0/19",
     "service": "Google Cloud",
@@ -1406,6 +1410,10 @@
     "service": "Google Cloud",
     "scope": "europe-west15"
   }, {
+    "ipv4Prefix": "8.228.32.0/19",
+    "service": "Google Cloud",
+    "scope": "europe-west2"
+  }, {
     "ipv4Prefix": "34.4.48.0/20",
     "service": "Google Cloud",
     "scope": "europe-west2"
@@ -2090,6 +2098,14 @@
     "service": "Google Cloud",
     "scope": "me-central2"
   }, {
+    "ipv4Prefix": "34.157.122.128/25",
+    "service": "Google Cloud",
+    "scope": "me-central2"
+  }, {
+    "ipv4Prefix": "34.157.218.128/25",
+    "service": "Google Cloud",
+    "scope": "me-central2"
+  }, {
     "ipv4Prefix": "34.166.0.0/16",
     "service": "Google Cloud",
     "scope": "me-central2"
@@ -2403,6 +2419,14 @@
     "scope": "southamerica-west1"
   }, {
     "ipv4Prefix": "34.153.225.0/24",
+    "service": "Google Cloud",
+    "scope": "southamerica-west1"
+  }, {
+    "ipv4Prefix": "34.157.122.0/25",
+    "service": "Google Cloud",
+    "scope": "southamerica-west1"
+  }, {
+    "ipv4Prefix": "34.157.218.0/25",
     "service": "Google Cloud",
     "scope": "southamerica-west1"
   }, {
@@ -3038,6 +3062,10 @@
     "service": "Google Cloud",
     "scope": "us-east1"
   }, {
+    "ipv4Prefix": "8.228.64.0/18",
+    "service": "Google Cloud",
+    "scope": "us-east4"
+  }, {
     "ipv4Prefix": "34.4.32.0/20",
     "service": "Google Cloud",
     "scope": "us-east4"
@@ -3565,6 +3593,10 @@
     "ipv6Prefix": "2600:1902:2b0::/44",
     "service": "Google Cloud",
     "scope": "us-west3"
+  }, {
+    "ipv4Prefix": "8.228.0.0/19",
+    "service": "Google Cloud",
+    "scope": "us-west4"
   }, {
     "ipv4Prefix": "34.16.128.0/17",
     "service": "Google Cloud",
