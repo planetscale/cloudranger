@@ -33185,4 +33185,240 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{34, 128, 62, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "GCP", region: "us-west8"}},
 	// GCP: 2600:1900:4280::/44, region: us-west8
 	{&net.IPNet{IP: []byte{38, 0, 25, 0, 66, 128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "GCP", region: "us-west8"}},
+	// Cloudflare: 173.245.48.0/20, region: ""
+	{&net.IPNet{IP: []byte{173, 245, 48, 0}, Mask: []byte{255, 255, 240, 0}}, IPInfo{cloud: "Cloudflare", region: ""}},
+	// Cloudflare: 103.21.244.0/22, region: ""
+	{&net.IPNet{IP: []byte{103, 21, 244, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "Cloudflare", region: ""}},
+	// Cloudflare: 103.22.200.0/22, region: ""
+	{&net.IPNet{IP: []byte{103, 22, 200, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "Cloudflare", region: ""}},
+	// Cloudflare: 103.31.4.0/22, region: ""
+	{&net.IPNet{IP: []byte{103, 31, 4, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "Cloudflare", region: ""}},
+	// Cloudflare: 141.101.64.0/18, region: ""
+	{&net.IPNet{IP: []byte{141, 101, 64, 0}, Mask: []byte{255, 255, 192, 0}}, IPInfo{cloud: "Cloudflare", region: ""}},
+	// Cloudflare: 108.162.192.0/18, region: ""
+	{&net.IPNet{IP: []byte{108, 162, 192, 0}, Mask: []byte{255, 255, 192, 0}}, IPInfo{cloud: "Cloudflare", region: ""}},
+	// Cloudflare: 190.93.240.0/20, region: ""
+	{&net.IPNet{IP: []byte{190, 93, 240, 0}, Mask: []byte{255, 255, 240, 0}}, IPInfo{cloud: "Cloudflare", region: ""}},
+	// Cloudflare: 188.114.96.0/20, region: ""
+	{&net.IPNet{IP: []byte{188, 114, 96, 0}, Mask: []byte{255, 255, 240, 0}}, IPInfo{cloud: "Cloudflare", region: ""}},
+	// Cloudflare: 197.234.240.0/22, region: ""
+	{&net.IPNet{IP: []byte{197, 234, 240, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "Cloudflare", region: ""}},
+	// Cloudflare: 198.41.128.0/17, region: ""
+	{&net.IPNet{IP: []byte{198, 41, 128, 0}, Mask: []byte{255, 255, 128, 0}}, IPInfo{cloud: "Cloudflare", region: ""}},
+	// Cloudflare: 162.158.0.0/15, region: ""
+	{&net.IPNet{IP: []byte{162, 158, 0, 0}, Mask: []byte{255, 254, 0, 0}}, IPInfo{cloud: "Cloudflare", region: ""}},
+	// Cloudflare: 104.16.0.0/13, region: ""
+	{&net.IPNet{IP: []byte{104, 16, 0, 0}, Mask: []byte{255, 248, 0, 0}}, IPInfo{cloud: "Cloudflare", region: ""}},
+	// Cloudflare: 104.24.0.0/14, region: ""
+	{&net.IPNet{IP: []byte{104, 24, 0, 0}, Mask: []byte{255, 252, 0, 0}}, IPInfo{cloud: "Cloudflare", region: ""}},
+	// Cloudflare: 172.64.0.0/13, region: ""
+	{&net.IPNet{IP: []byte{172, 64, 0, 0}, Mask: []byte{255, 248, 0, 0}}, IPInfo{cloud: "Cloudflare", region: ""}},
+	// Cloudflare: 131.0.72.0/22, region: ""
+	{&net.IPNet{IP: []byte{131, 0, 72, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "Cloudflare", region: ""}},
+	// Cloudflare: 2400:cb00::/32, region: ""
+	{&net.IPNet{IP: []byte{36, 0, 203, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: ""}},
+	// Cloudflare: 2606:4700::/32, region: ""
+	{&net.IPNet{IP: []byte{38, 6, 71, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: ""}},
+	// Cloudflare: 2803:f800::/32, region: ""
+	{&net.IPNet{IP: []byte{40, 3, 248, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: ""}},
+	// Cloudflare: 2405:b500::/32, region: ""
+	{&net.IPNet{IP: []byte{36, 5, 181, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: ""}},
+	// Cloudflare: 2405:8100::/32, region: ""
+	{&net.IPNet{IP: []byte{36, 5, 129, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: ""}},
+	// Cloudflare: 2a06:98c0::/29, region: ""
+	{&net.IPNet{IP: []byte{42, 6, 152, 192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 248, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: ""}},
+	// Cloudflare: 2c0f:f248::/32, region: ""
+	{&net.IPNet{IP: []byte{44, 15, 242, 72, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: ""}},
+	// Cloudflare: 14.204.96.224/27, region: "cn"
+	{&net.IPNet{IP: []byte{14, 204, 96, 224}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 27.36.126.224/27, region: "cn"
+	{&net.IPNet{IP: []byte{27, 36, 126, 224}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 27.128.218.224/27, region: "cn"
+	{&net.IPNet{IP: []byte{27, 128, 218, 224}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 36.136.95.32/27, region: "cn"
+	{&net.IPNet{IP: []byte{36, 136, 95, 32}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 36.147.52.160/27, region: "cn"
+	{&net.IPNet{IP: []byte{36, 147, 52, 160}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 36.154.11.224/27, region: "cn"
+	{&net.IPNet{IP: []byte{36, 154, 11, 224}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 42.236.121.160/27, region: "cn"
+	{&net.IPNet{IP: []byte{42, 236, 121, 160}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 60.13.99.64/26, region: "cn"
+	{&net.IPNet{IP: []byte{60, 13, 99, 64}, Mask: []byte{255, 255, 255, 192}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 101.69.205.224/27, region: "cn"
+	{&net.IPNet{IP: []byte{101, 69, 205, 224}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 103.44.252.32/27, region: "cn"
+	{&net.IPNet{IP: []byte{103, 44, 252, 32}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 106.225.240.96/27, region: "cn"
+	{&net.IPNet{IP: []byte{106, 225, 240, 96}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 111.7.87.160/27, region: "cn"
+	{&net.IPNet{IP: []byte{111, 7, 87, 160}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 111.48.87.160/27, region: "cn"
+	{&net.IPNet{IP: []byte{111, 48, 87, 160}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 111.124.70.32/27, region: "cn"
+	{&net.IPNet{IP: []byte{111, 124, 70, 32}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 111.170.27.96/27, region: "cn"
+	{&net.IPNet{IP: []byte{111, 170, 27, 96}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 111.177.11.224/27, region: "cn"
+	{&net.IPNet{IP: []byte{111, 177, 11, 224}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 112.49.47.96/27, region: "cn"
+	{&net.IPNet{IP: []byte{112, 49, 47, 96}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 113.56.217.96/27, region: "cn"
+	{&net.IPNet{IP: []byte{113, 56, 217, 96}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 114.67.161.32/27, region: "cn"
+	{&net.IPNet{IP: []byte{114, 67, 161, 32}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 114.67.192.208/28, region: "cn"
+	{&net.IPNet{IP: []byte{114, 67, 192, 208}, Mask: []byte{255, 255, 255, 240}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 116.163.41.64/26, region: "cn"
+	{&net.IPNet{IP: []byte{116, 163, 41, 64}, Mask: []byte{255, 255, 255, 192}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 116.198.49.144/28, region: "cn"
+	{&net.IPNet{IP: []byte{116, 198, 49, 144}, Mask: []byte{255, 255, 255, 240}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 116.198.165.16/28, region: "cn"
+	{&net.IPNet{IP: []byte{116, 198, 165, 16}, Mask: []byte{255, 255, 255, 240}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 117.187.40.32/27, region: "cn"
+	{&net.IPNet{IP: []byte{117, 187, 40, 32}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 117.187.185.32/27, region: "cn"
+	{&net.IPNet{IP: []byte{117, 187, 185, 32}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 118.180.26.32/27, region: "cn"
+	{&net.IPNet{IP: []byte{118, 180, 26, 32}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 119.0.67.32/27, region: "cn"
+	{&net.IPNet{IP: []byte{119, 0, 67, 32}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 119.6.235.32/27, region: "cn"
+	{&net.IPNet{IP: []byte{119, 6, 235, 32}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 119.188.204.32/27, region: "cn"
+	{&net.IPNet{IP: []byte{119, 188, 204, 32}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 120.206.188.224/27, region: "cn"
+	{&net.IPNet{IP: []byte{120, 206, 188, 224}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 120.220.55.96/27, region: "cn"
+	{&net.IPNet{IP: []byte{120, 220, 55, 96}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 120.226.37.160/27, region: "cn"
+	{&net.IPNet{IP: []byte{120, 226, 37, 160}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 121.17.125.32/27, region: "cn"
+	{&net.IPNet{IP: []byte{121, 17, 125, 32}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 122.190.152.160/27, region: "cn"
+	{&net.IPNet{IP: []byte{122, 190, 152, 160}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 122.226.163.224/27, region: "cn"
+	{&net.IPNet{IP: []byte{122, 226, 163, 224}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 123.138.203.160/27, region: "cn"
+	{&net.IPNet{IP: []byte{123, 138, 203, 160}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 124.166.232.32/27, region: "cn"
+	{&net.IPNet{IP: []byte{124, 166, 232, 32}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 124.225.84.32/27, region: "cn"
+	{&net.IPNet{IP: []byte{124, 225, 84, 32}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 124.236.72.32/27, region: "cn"
+	{&net.IPNet{IP: []byte{124, 236, 72, 32}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 125.77.31.224/27, region: "cn"
+	{&net.IPNet{IP: []byte{125, 77, 31, 224}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 150.138.153.192/26, region: "cn"
+	{&net.IPNet{IP: []byte{150, 138, 153, 192}, Mask: []byte{255, 255, 255, 192}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 182.201.240.224/27, region: "cn"
+	{&net.IPNet{IP: []byte{182, 201, 240, 224}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 183.131.87.224/27, region: "cn"
+	{&net.IPNet{IP: []byte{183, 131, 87, 224}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 198.41.130.16/28, region: "cn"
+	{&net.IPNet{IP: []byte{198, 41, 130, 16}, Mask: []byte{255, 255, 255, 240}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 218.205.95.64/27, region: "cn"
+	{&net.IPNet{IP: []byte{218, 205, 95, 64}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 218.207.1.32/27, region: "cn"
+	{&net.IPNet{IP: []byte{218, 207, 1, 32}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 220.185.189.128/25, region: "cn"
+	{&net.IPNet{IP: []byte{220, 185, 189, 128}, Mask: []byte{255, 255, 255, 128}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 222.211.66.64/27, region: "cn"
+	{&net.IPNet{IP: []byte{222, 211, 66, 64}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 223.85.111.224/27, region: "cn"
+	{&net.IPNet{IP: []byte{223, 85, 111, 224}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2400:cb00:164:0:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 0, 203, 0, 1, 100, 0, 0, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2403:1ec0:1200:ff98::/64, region: "cn"
+	{&net.IPNet{IP: []byte{36, 3, 30, 192, 18, 0, 255, 152, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2403:1ec0:1400:ff01::/64, region: "cn"
+	{&net.IPNet{IP: []byte{36, 3, 30, 192, 20, 0, 255, 1, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2403:1ec0:1400:ff05::/64, region: "cn"
+	{&net.IPNet{IP: []byte{36, 3, 30, 192, 20, 0, 255, 5, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2403:1ec0:1610:ff05::/64, region: "cn"
+	{&net.IPNet{IP: []byte{36, 3, 30, 192, 22, 16, 255, 5, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2408:8719:64:50:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 8, 135, 25, 0, 100, 0, 80, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2408:871a:8810:205:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 8, 135, 26, 136, 16, 2, 5, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2408:8720:806:102:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 8, 135, 32, 8, 6, 1, 2, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2408:8726:3000:fff4:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 8, 135, 38, 48, 0, 255, 244, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2408:8740:71fc:406:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 8, 135, 64, 113, 252, 4, 6, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2408:874f:8000:20:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 8, 135, 79, 128, 0, 0, 32, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2408:874f:b000:4:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 8, 135, 79, 176, 0, 0, 4, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2408:8752:600:6:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 8, 135, 82, 6, 0, 0, 6, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2408:8756:4cff:d002:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 8, 135, 86, 76, 255, 208, 2, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2408:8760:107:2:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 8, 135, 96, 1, 7, 0, 2, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2408:8766:5:3:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 8, 135, 102, 0, 5, 0, 3, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2408:876c:2c0:112:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 8, 135, 108, 2, 192, 1, 18, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2408:8773:fff:ffe1:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 8, 135, 115, 15, 255, 255, 225, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2409:8720:4001:2:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 9, 135, 32, 64, 1, 0, 2, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2409:8760:1e81:52:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 9, 135, 96, 30, 129, 0, 82, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2409:8c28:203:a:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 9, 140, 40, 2, 3, 0, 10, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2409:8c34:d00:6:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 9, 140, 52, 13, 0, 0, 6, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2409:8c38:c50:604:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 9, 140, 56, 12, 80, 6, 4, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2409:8c3c:1400:5:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 9, 140, 60, 20, 0, 0, 5, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2409:8c44:1b00:d06:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 9, 140, 68, 27, 0, 13, 6, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2409:8c4d:5200:c05:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 9, 140, 77, 82, 0, 12, 5, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2409:8c50:a00:2213:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 9, 140, 80, 10, 0, 34, 19, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2409:8c5c:b00:206:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 9, 140, 92, 11, 0, 2, 6, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2409:8c62:e10:a04:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 9, 140, 98, 14, 16, 10, 4, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2409:8c6a:3a11:2:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 9, 140, 106, 58, 17, 0, 2, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2409:8c6a:4c11:1101:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 9, 140, 106, 76, 17, 17, 1, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 2409:8c6c:561:8124:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 9, 140, 108, 5, 97, 129, 36, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 240e:b1:9801:20d:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 14, 0, 177, 152, 1, 2, 13, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 240e:cf:8800:1b:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 14, 0, 207, 136, 0, 0, 27, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 240e:f7:4d0f:601:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 14, 0, 247, 77, 15, 6, 1, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 240e:f7:7c00:821:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 14, 0, 247, 124, 0, 8, 33, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 240e:90d:1101:203:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 14, 9, 13, 17, 1, 2, 3, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 240e:914:4005:1:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 14, 9, 20, 64, 5, 0, 1, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 240e:935:a04:2b21:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 14, 9, 53, 10, 4, 43, 33, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 240e:938:a05:22:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 14, 9, 56, 10, 5, 0, 34, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 240e:940:e009:14e:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 14, 9, 64, 224, 9, 1, 78, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 240e:944:8:5:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 14, 9, 68, 0, 8, 0, 5, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 240e:95d:802:400:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 14, 9, 93, 8, 2, 4, 0, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 240e:95d:c02:7:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 14, 9, 93, 12, 2, 0, 7, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 240e:965:820:105:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 14, 9, 101, 8, 32, 1, 5, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 240e:974:e200:2305:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 14, 9, 116, 226, 0, 35, 5, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
+	// Cloudflare: 240e:97c:4014:102:1000::/68, region: "cn"
+	{&net.IPNet{IP: []byte{36, 14, 9, 124, 64, 20, 1, 2, 16, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "Cloudflare", region: "cn"}},
 }
