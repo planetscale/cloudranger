@@ -60,6 +60,20 @@ type GCPPrefix struct {
 	Service    string `json:"service"` // currently ignored, and it's always the same 'Google Cloud Platform' anyway
 }
 
+// CloudflareIPData represents the structure of the JSON data from Cloudflare.
+type CloudflareIPData struct {
+	Result  CloudflareIPResult `json:"result"`
+	Success bool               `json:"success"` // currently ignored
+}
+
+// CloudflareIPResult contains the IP prefix lists.
+type CloudflareIPResult struct {
+	IPv4CIDRs    []string `json:"ipv4_cidrs"`
+	IPv6CIDRs    []string `json:"ipv6_cidrs"`
+	JDCloudCIDRs []string `json:"jdcloud_cidrs"`
+	ETag         string   `json:"etag"` // currently ignored
+}
+
 func main() {
 	out, err := os.Create("zz_generated.go")
 	if err != nil {
@@ -159,6 +173,73 @@ func main() {
 					i[0], i[1], i[2], i[3], i[4], i[5], i[6], i[7], i[8], i[9], i[10], i[11], i[12], i[13], i[14], i[15],
 					m[0], m[1], m[2], m[3], m[4], m[5], m[6], m[7], m[8], m[9], m[10], m[11], m[12], m[13], m[14], m[15],
 					prefix.Scope,
+				)
+			}
+		}
+	}
+
+	// Cloudflare
+	// {&net.IPNet{IP: []byte{173, 245, 48, 0}, Mask: []byte{255, 255, 240, 0}}, IPInfo{cloud: "Cloudflare", region: ""}},
+	{
+		var data CloudflareIPData
+
+		d, err := os.ReadFile("data/cloudflare-ips.json")
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		if err := json.Unmarshal(d, &data); err != nil {
+			log.Fatal(err)
+		}
+
+		for _, prefix := range data.Result.IPv4CIDRs {
+			_, ipnet, err := net.ParseCIDR(prefix)
+			if err != nil {
+				log.Fatal(err)
+			}
+			fmt.Fprintf(out, "\t// Cloudflare: %s, region: \"\"\n", prefix) //nolint:errcheck
+			fmt.Fprintf(out,                                                //nolint:errcheck
+				"\t{&net.IPNet{IP: []byte{%d, %d, %d, %d}, Mask: []byte{%d, %d, %d, %d}}, IPInfo{cloud: \"Cloudflare\", region: \"\"}},\n",
+				ipnet.IP[0], ipnet.IP[1], ipnet.IP[2], ipnet.IP[3],
+				ipnet.Mask[0], ipnet.Mask[1], ipnet.Mask[2], ipnet.Mask[3],
+			)
+		}
+
+		for _, prefix := range data.Result.IPv6CIDRs {
+			_, ipnet, err := net.ParseCIDR(prefix)
+			if err != nil {
+				log.Fatal(err)
+			}
+			i := ipnet.IP
+			m := ipnet.Mask
+			fmt.Fprintf(out, "\t// Cloudflare: %s, region: \"\"\n", prefix) //nolint:errcheck
+			fmt.Fprintf(out,                                                //nolint:errcheck
+				"\t{&net.IPNet{IP: []byte{%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d}, Mask: []byte{%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d}}, IPInfo{cloud: \"Cloudflare\", region: \"\"}},\n",
+				i[0], i[1], i[2], i[3], i[4], i[5], i[6], i[7], i[8], i[9], i[10], i[11], i[12], i[13], i[14], i[15],
+				m[0], m[1], m[2], m[3], m[4], m[5], m[6], m[7], m[8], m[9], m[10], m[11], m[12], m[13], m[14], m[15],
+			)
+		}
+
+		for _, prefix := range data.Result.JDCloudCIDRs {
+			_, ipnet, err := net.ParseCIDR(prefix)
+			if err != nil {
+				log.Fatal(err)
+			}
+			if len(ipnet.IP) == net.IPv4len {
+				fmt.Fprintf(out, "\t// Cloudflare: %s, region: \"cn\"\n", prefix) //nolint:errcheck
+				fmt.Fprintf(out,                                                  //nolint:errcheck
+					"\t{&net.IPNet{IP: []byte{%d, %d, %d, %d}, Mask: []byte{%d, %d, %d, %d}}, IPInfo{cloud: \"Cloudflare\", region: \"cn\"}},\n",
+					ipnet.IP[0], ipnet.IP[1], ipnet.IP[2], ipnet.IP[3],
+					ipnet.Mask[0], ipnet.Mask[1], ipnet.Mask[2], ipnet.Mask[3],
+				)
+			} else {
+				i := ipnet.IP
+				m := ipnet.Mask
+				fmt.Fprintf(out, "\t// Cloudflare: %s, region: \"cn\"\n", prefix) //nolint:errcheck
+				fmt.Fprintf(out,                                                  //nolint:errcheck
+					"\t{&net.IPNet{IP: []byte{%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d}, Mask: []byte{%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d}}, IPInfo{cloud: \"Cloudflare\", region: \"cn\"}},\n",
+					i[0], i[1], i[2], i[3], i[4], i[5], i[6], i[7], i[8], i[9], i[10], i[11], i[12], i[13], i[14], i[15],
+					m[0], m[1], m[2], m[3], m[4], m[5], m[6], m[7], m[8], m[9], m[10], m[11], m[12], m[13], m[14], m[15],
 				)
 			}
 		}

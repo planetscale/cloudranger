@@ -45,6 +45,25 @@ func TestGetIP(t *testing.T) {
 			found:          true,
 		},
 		{
+			name:          "valid IPv4 address in Cloudflare",
+			ip:            "104.16.0.1",
+			expectedCloud: "Cloudflare",
+			found:         true,
+		},
+		{
+			name:          "valid IPv6 address in Cloudflare",
+			ip:            "2606:4700::1",
+			expectedCloud: "Cloudflare",
+			found:         true,
+		},
+		{
+			name:           "valid IPv4 address in Cloudflare China Network",
+			ip:             "14.204.96.225",
+			expectedCloud:  "Cloudflare",
+			expectedRegion: "cn",
+			found:          true,
+		},
+		{
 			name:  "non-cloud IP address",
 			ip:    "127.0.0.1",
 			found: false,
