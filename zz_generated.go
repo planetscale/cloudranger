@@ -339,6 +339,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{15, 230, 158, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "eu-west-2"}},
 	// AWS: 16.12.32.0/22, region: eu-central-1
 	{&net.IPNet{IP: []byte{16, 12, 32, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "eu-central-1"}},
+	// AWS: 16.15.120.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 120, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 43.206.0.0/15, region: ap-northeast-1
 	{&net.IPNet{IP: []byte{43, 206, 0, 0}, Mask: []byte{255, 254, 0, 0}}, IPInfo{cloud: "AWS", region: "ap-northeast-1"}},
 	// AWS: 43.226.27.0/24, region: us-west-2
@@ -1609,6 +1611,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{54, 226, 0, 0}, Mask: []byte{255, 254, 0, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 54.230.200.0/21, region: GLOBAL
 	{&net.IPNet{IP: []byte{54, 230, 200, 0}, Mask: []byte{255, 255, 248, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
+	// AWS: 80.126.6.0/24, region: GLOBAL
+	{&net.IPNet{IP: []byte{80, 126, 6, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
 	// AWS: 150.222.37.192/26, region: eu-west-2
 	{&net.IPNet{IP: []byte{150, 222, 37, 192}, Mask: []byte{255, 255, 255, 192}}, IPInfo{cloud: "AWS", region: "eu-west-2"}},
 	// AWS: 161.188.120.0/22, region: us-east-1
@@ -1657,6 +1661,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{52, 93, 127, 201}, Mask: []byte{255, 255, 255, 255}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 52.94.152.182/32, region: ap-southeast-2
 	{&net.IPNet{IP: []byte{52, 94, 152, 182}, Mask: []byte{255, 255, 255, 255}}, IPInfo{cloud: "AWS", region: "ap-southeast-2"}},
+	// AWS: 54.25.192.0/18, region: GLOBAL
+	{&net.IPNet{IP: []byte{54, 25, 192, 0}, Mask: []byte{255, 255, 192, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
 	// AWS: 54.252.0.0/16, region: ap-southeast-2
 	{&net.IPNet{IP: []byte{54, 252, 0, 0}, Mask: []byte{255, 255, 0, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-2"}},
 	// AWS: 64.252.125.0/24, region: us-east-1
@@ -2031,6 +2037,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{64, 91, 192, 0}, Mask: []byte{255, 255, 224, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
 	// AWS: 64.252.121.0/24, region: us-west-1
 	{&net.IPNet{IP: []byte{64, 252, 121, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "us-west-1"}},
+	// AWS: 80.126.14.0/24, region: GLOBAL
+	{&net.IPNet{IP: []byte{80, 126, 14, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
 	// AWS: 99.150.32.0/21, region: ap-southeast-2
 	{&net.IPNet{IP: []byte{99, 150, 32, 0}, Mask: []byte{255, 255, 248, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-2"}},
 	// AWS: 108.156.0.0/14, region: GLOBAL
@@ -2549,6 +2557,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{15, 230, 15, 255}, Mask: []byte{255, 255, 255, 255}}, IPInfo{cloud: "AWS", region: "eu-central-1"}},
 	// AWS: 15.230.223.12/32, region: eu-west-1
 	{&net.IPNet{IP: []byte{15, 230, 223, 12}, Mask: []byte{255, 255, 255, 255}}, IPInfo{cloud: "AWS", region: "eu-west-1"}},
+	// AWS: 16.15.96.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 96, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 23.20.0.0/14, region: us-east-1
 	{&net.IPNet{IP: []byte{23, 20, 0, 0}, Mask: []byte{255, 252, 0, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 35.54.64.0/18, region: us-east-1
@@ -2817,6 +2827,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{15, 230, 39, 18}, Mask: []byte{255, 255, 255, 254}}, IPInfo{cloud: "AWS", region: "us-east-2"}},
 	// AWS: 15.230.124.0/24, region: eu-west-1
 	{&net.IPNet{IP: []byte{15, 230, 124, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "eu-west-1"}},
+	// AWS: 16.15.112.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 112, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 45.33.181.0/24, region: eu-west-2
 	{&net.IPNet{IP: []byte{45, 33, 181, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "eu-west-2"}},
 	// AWS: 52.93.91.96/32, region: us-east-1
@@ -3545,6 +3557,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{54, 239, 64, 0}, Mask: []byte{255, 255, 248, 0}}, IPInfo{cloud: "AWS", region: "eu-central-1"}},
 	// AWS: 65.9.128.0/18, region: GLOBAL
 	{&net.IPNet{IP: []byte{65, 9, 128, 0}, Mask: []byte{255, 255, 192, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
+	// AWS: 80.126.11.0/24, region: GLOBAL
+	{&net.IPNet{IP: []byte{80, 126, 11, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
 	// AWS: 99.77.129.0/24, region: us-east-1
 	{&net.IPNet{IP: []byte{99, 77, 129, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 108.175.60.0/22, region: us-gov-east-1
@@ -4151,6 +4165,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{15, 230, 39, 200}, Mask: []byte{255, 255, 255, 254}}, IPInfo{cloud: "AWS", region: "us-east-2"}},
 	// AWS: 15.248.165.0/24, region: us-east-2
 	{&net.IPNet{IP: []byte{15, 248, 165, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "us-east-2"}},
+	// AWS: 16.15.76.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 76, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 35.71.93.0/24, region: ap-southeast-6
 	{&net.IPNet{IP: []byte{35, 71, 93, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-6"}},
 	// AWS: 35.71.127.0/24, region: ap-east-2
@@ -4363,6 +4379,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{15, 230, 15, 122}, Mask: []byte{255, 255, 255, 254}}, IPInfo{cloud: "AWS", region: "eu-central-1"}},
 	// AWS: 15.251.0.3/32, region: us-west-1
 	{&net.IPNet{IP: []byte{15, 251, 0, 3}, Mask: []byte{255, 255, 255, 255}}, IPInfo{cloud: "AWS", region: "us-west-1"}},
+	// AWS: 16.15.84.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 84, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 23.91.0.0/19, region: GLOBAL
 	{&net.IPNet{IP: []byte{23, 91, 0, 0}, Mask: []byte{255, 255, 224, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
 	// AWS: 44.224.0.0/11, region: us-west-2
@@ -4625,6 +4643,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{15, 230, 115, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-2"}},
 	// AWS: 16.12.81.0/24, region: ap-southeast-6
 	{&net.IPNet{IP: []byte{16, 12, 81, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-6"}},
+	// AWS: 16.15.100.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 100, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 18.208.0.0/13, region: us-east-1
 	{&net.IPNet{IP: []byte{18, 208, 0, 0}, Mask: []byte{255, 248, 0, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 52.93.126.131/32, region: ap-southeast-2
@@ -4827,6 +4847,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{150, 222, 55, 224}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "AWS", region: "us-south-1"}},
 	// AWS: 15.248.56.0/21, region: ap-southeast-5
 	{&net.IPNet{IP: []byte{15, 248, 56, 0}, Mask: []byte{255, 255, 248, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-5"}},
+	// AWS: 16.15.108.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 108, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 18.99.240.0/20, region: us-gov-west-1
 	{&net.IPNet{IP: []byte{18, 99, 240, 0}, Mask: []byte{255, 255, 240, 0}}, IPInfo{cloud: "AWS", region: "us-gov-west-1"}},
 	// AWS: 18.188.0.0/16, region: us-east-2
@@ -4951,6 +4973,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{15, 220, 16, 0}, Mask: []byte{255, 255, 240, 0}}, IPInfo{cloud: "AWS", region: "us-west-2"}},
 	// AWS: 15.230.15.50/31, region: eu-central-1
 	{&net.IPNet{IP: []byte{15, 230, 15, 50}, Mask: []byte{255, 255, 255, 254}}, IPInfo{cloud: "AWS", region: "eu-central-1"}},
+	// AWS: 16.15.80.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 80, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 16.192.0.0/16, region: eu-north-1
 	{&net.IPNet{IP: []byte{16, 192, 0, 0}, Mask: []byte{255, 255, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-north-1"}},
 	// AWS: 40.174.0.0/15, region: me-central-1
@@ -5095,6 +5119,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{69, 107, 6, 168}, Mask: []byte{255, 255, 255, 248}}, IPInfo{cloud: "AWS", region: "ap-southeast-1"}},
 	// AWS: 76.223.172.0/22, region: us-east-1
 	{&net.IPNet{IP: []byte{76, 223, 172, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
+	// AWS: 80.126.13.0/24, region: GLOBAL
+	{&net.IPNet{IP: []byte{80, 126, 13, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
 	// AWS: 99.77.162.0/24, region: us-east-2
 	{&net.IPNet{IP: []byte{99, 77, 162, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "us-east-2"}},
 	// AWS: 99.82.161.0/24, region: eu-west-3
@@ -5337,6 +5363,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{54, 222, 112, 0}, Mask: []byte{255, 255, 240, 0}}, IPInfo{cloud: "AWS", region: "cn-north-1"}},
 	// AWS: 54.240.236.73/32, region: eu-south-1
 	{&net.IPNet{IP: []byte{54, 240, 236, 73}, Mask: []byte{255, 255, 255, 255}}, IPInfo{cloud: "AWS", region: "eu-south-1"}},
+	// AWS: 80.126.12.0/24, region: GLOBAL
+	{&net.IPNet{IP: []byte{80, 126, 12, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
 	// AWS: 99.87.0.0/22, region: ap-southeast-1
 	{&net.IPNet{IP: []byte{99, 87, 0, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-1"}},
 	// AWS: 118.193.97.64/26, region: GLOBAL
@@ -5429,6 +5457,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{15, 248, 64, 0}, Mask: []byte{255, 255, 248, 0}}, IPInfo{cloud: "AWS", region: "ca-west-1"}},
 	// AWS: 15.248.167.5/32, region: us-south-1
 	{&net.IPNet{IP: []byte{15, 248, 167, 5}, Mask: []byte{255, 255, 255, 255}}, IPInfo{cloud: "AWS", region: "us-south-1"}},
+	// AWS: 35.54.63.0/24, region: us-west-2
+	{&net.IPNet{IP: []byte{35, 54, 63, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "us-west-2"}},
 	// AWS: 52.64.0.0/17, region: ap-southeast-2
 	{&net.IPNet{IP: []byte{52, 64, 0, 0}, Mask: []byte{255, 255, 128, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-2"}},
 	// AWS: 52.93.70.128/25, region: us-west-1
@@ -5907,6 +5937,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{54, 193, 0, 0}, Mask: []byte{255, 255, 0, 0}}, IPInfo{cloud: "AWS", region: "us-west-1"}},
 	// AWS: 70.232.92.0/22, region: us-east-1
 	{&net.IPNet{IP: []byte{70, 232, 92, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
+	// AWS: 80.126.5.0/24, region: GLOBAL
+	{&net.IPNet{IP: []byte{80, 126, 5, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
 	// AWS: 99.77.247.0/24, region: eu-central-1
 	{&net.IPNet{IP: []byte{99, 77, 247, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "eu-central-1"}},
 	// AWS: 150.222.140.0/24, region: us-west-1
@@ -5985,6 +6017,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{54, 240, 128, 0}, Mask: []byte{255, 255, 192, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
 	// AWS: 54.240.236.6/32, region: eu-south-1
 	{&net.IPNet{IP: []byte{54, 240, 236, 6}, Mask: []byte{255, 255, 255, 255}}, IPInfo{cloud: "AWS", region: "eu-south-1"}},
+	// AWS: 64.113.223.0/24, region: us-west-2
+	{&net.IPNet{IP: []byte{64, 113, 223, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "us-west-2"}},
 	// AWS: 69.107.11.8/29, region: eu-north-1
 	{&net.IPNet{IP: []byte{69, 107, 11, 8}, Mask: []byte{255, 255, 255, 248}}, IPInfo{cloud: "AWS", region: "eu-north-1"}},
 	// AWS: 69.107.12.40/29, region: eu-west-2
@@ -6217,6 +6251,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{15, 251, 0, 13}, Mask: []byte{255, 255, 255, 255}}, IPInfo{cloud: "AWS", region: "us-west-1"}},
 	// AWS: 15.251.0.29/32, region: il-central-1
 	{&net.IPNet{IP: []byte{15, 251, 0, 29}, Mask: []byte{255, 255, 255, 255}}, IPInfo{cloud: "AWS", region: "il-central-1"}},
+	// AWS: 16.15.88.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 88, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 16.25.0.0/16, region: me-south-1
 	{&net.IPNet{IP: []byte{16, 25, 0, 0}, Mask: []byte{255, 255, 0, 0}}, IPInfo{cloud: "AWS", region: "me-south-1"}},
 	// AWS: 52.93.18.0/24, region: eu-west-1
@@ -6275,6 +6311,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{15, 230, 109, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 15.230.122.3/32, region: me-south-1
 	{&net.IPNet{IP: []byte{15, 230, 122, 3}, Mask: []byte{255, 255, 255, 255}}, IPInfo{cloud: "AWS", region: "me-south-1"}},
+	// AWS: 16.15.116.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 116, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 16.177.0.0/16, region: ap-southeast-2
 	{&net.IPNet{IP: []byte{16, 177, 0, 0}, Mask: []byte{255, 255, 0, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-2"}},
 	// AWS: 35.55.40.0/24, region: eu-north-1
@@ -7445,8 +7483,6 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{76, 223, 170, 0}, Mask: []byte{255, 255, 255, 240}}, IPInfo{cloud: "AWS", region: "ca-west-1"}},
 	// AWS: 150.222.102.0/24, region: us-west-2
 	{&net.IPNet{IP: []byte{150, 222, 102, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "us-west-2"}},
-	// AWS: 1.178.86.0/24, region: ap-southeast-3
-	{&net.IPNet{IP: []byte{1, 178, 86, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-3"}},
 	// AWS: 1.178.172.0/23, region: GLOBAL
 	{&net.IPNet{IP: []byte{1, 178, 172, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
 	// AWS: 3.2.106.0/24, region: us-west-2
@@ -7557,6 +7593,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{64, 252, 65, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "us-west-2"}},
 	// AWS: 69.107.11.224/29, region: eu-south-1
 	{&net.IPNet{IP: []byte{69, 107, 11, 224}, Mask: []byte{255, 255, 255, 248}}, IPInfo{cloud: "AWS", region: "eu-south-1"}},
+	// AWS: 80.126.4.0/24, region: GLOBAL
+	{&net.IPNet{IP: []byte{80, 126, 4, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
 	// AWS: 104.255.56.63/32, region: us-east-1
 	{&net.IPNet{IP: []byte{104, 255, 56, 63}, Mask: []byte{255, 255, 255, 255}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 119.147.182.0/25, region: GLOBAL
@@ -7875,6 +7913,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{52, 219, 156, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "ap-south-1"}},
 	// AWS: 54.222.57.0/24, region: cn-north-1
 	{&net.IPNet{IP: []byte{54, 222, 57, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "cn-north-1"}},
+	// AWS: 80.126.10.0/24, region: GLOBAL
+	{&net.IPNet{IP: []byte{80, 126, 10, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
 	// AWS: 89.48.0.0/13, region: ap-southeast-7
 	{&net.IPNet{IP: []byte{89, 48, 0, 0}, Mask: []byte{255, 248, 0, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-7"}},
 	// AWS: 99.83.128.0/17, region: GLOBAL
@@ -7941,6 +7981,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{52, 95, 60, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "eu-west-1"}},
 	// AWS: 54.26.166.0/24, region: us-east-1
 	{&net.IPNet{IP: []byte{54, 26, 166, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
+	// AWS: 64.113.192.0/22, region: us-west-2
+	{&net.IPNet{IP: []byte{64, 113, 192, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-west-2"}},
 	// AWS: 99.77.163.0/24, region: il-central-1
 	{&net.IPNet{IP: []byte{99, 77, 163, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "il-central-1"}},
 	// AWS: 136.18.23.0/24, region: ap-southeast-2
@@ -8157,6 +8199,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{15, 230, 58, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "us-west-1"}},
 	// AWS: 16.15.32.0/20, region: us-west-2
 	{&net.IPNet{IP: []byte{16, 15, 32, 0}, Mask: []byte{255, 255, 240, 0}}, IPInfo{cloud: "AWS", region: "us-west-2"}},
+	// AWS: 16.15.104.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 104, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 18.68.0.0/16, region: GLOBAL
 	{&net.IPNet{IP: []byte{18, 68, 0, 0}, Mask: []byte{255, 255, 0, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
 	// AWS: 35.34.100.0/24, region: us-east-1
@@ -8185,6 +8229,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{56, 68, 0, 0}, Mask: []byte{255, 255, 128, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-5"}},
 	// AWS: 69.107.11.248/29, region: us-west-1
 	{&net.IPNet{IP: []byte{69, 107, 11, 248}, Mask: []byte{255, 255, 255, 248}}, IPInfo{cloud: "AWS", region: "us-west-1"}},
+	// AWS: 80.126.7.0/24, region: GLOBAL
+	{&net.IPNet{IP: []byte{80, 126, 7, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
 	// AWS: 99.77.32.0/20, region: eu-south-2
 	{&net.IPNet{IP: []byte{99, 77, 32, 0}, Mask: []byte{255, 255, 240, 0}}, IPInfo{cloud: "AWS", region: "eu-south-2"}},
 	// AWS: 99.77.154.0/24, region: us-west-1
@@ -8513,6 +8559,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{15, 248, 142, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "eu-central-1"}},
 	// AWS: 16.12.18.0/23, region: eu-west-3
 	{&net.IPNet{IP: []byte{16, 12, 18, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "eu-west-3"}},
+	// AWS: 16.15.92.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 92, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 18.253.0.0/16, region: us-gov-east-1
 	{&net.IPNet{IP: []byte{18, 253, 0, 0}, Mask: []byte{255, 255, 0, 0}}, IPInfo{cloud: "AWS", region: "us-gov-east-1"}},
 	// AWS: 43.193.65.0/24, region: cn-northwest-1
@@ -8579,6 +8627,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{130, 176, 192, 0}, Mask: []byte{255, 255, 224, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
 	// AWS: 15.230.143.0/24, region: eu-south-1
 	{&net.IPNet{IP: []byte{15, 230, 143, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "eu-south-1"}},
+	// AWS: 16.15.68.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 68, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 18.153.0.0/16, region: eu-central-1
 	{&net.IPNet{IP: []byte{18, 153, 0, 0}, Mask: []byte{255, 255, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-central-1"}},
 	// AWS: 18.202.0.0/15, region: eu-west-1
@@ -8627,6 +8677,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{64, 252, 98, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "ap-south-1"}},
 	// AWS: 75.45.128.0/18, region: eu-central-1
 	{&net.IPNet{IP: []byte{75, 45, 128, 0}, Mask: []byte{255, 255, 192, 0}}, IPInfo{cloud: "AWS", region: "eu-central-1"}},
+	// AWS: 80.126.8.0/24, region: GLOBAL
+	{&net.IPNet{IP: []byte{80, 126, 8, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
 	// AWS: 150.222.144.96/32, region: eu-central-1
 	{&net.IPNet{IP: []byte{150, 222, 144, 96}, Mask: []byte{255, 255, 255, 255}}, IPInfo{cloud: "AWS", region: "eu-central-1"}},
 	// AWS: 173.83.196.0/23, region: eu-central-1
@@ -8703,6 +8755,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{52, 94, 206, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "sa-east-1"}},
 	// AWS: 54.233.128.0/17, region: sa-east-1
 	{&net.IPNet{IP: []byte{54, 233, 128, 0}, Mask: []byte{255, 255, 128, 0}}, IPInfo{cloud: "AWS", region: "sa-east-1"}},
+	// AWS: 80.126.3.0/24, region: GLOBAL
+	{&net.IPNet{IP: []byte{80, 126, 3, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
 	// AWS: 150.222.139.120/30, region: eu-central-1
 	{&net.IPNet{IP: []byte{150, 222, 139, 120}, Mask: []byte{255, 255, 255, 252}}, IPInfo{cloud: "AWS", region: "eu-central-1"}},
 	// AWS: 150.222.144.68/32, region: eu-central-1
@@ -9399,6 +9453,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{15, 230, 53, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-1"}},
 	// AWS: 15.230.74.64/26, region: ap-east-1
 	{&net.IPNet{IP: []byte{15, 230, 74, 64}, Mask: []byte{255, 255, 255, 192}}, IPInfo{cloud: "AWS", region: "ap-east-1"}},
+	// AWS: 16.15.72.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 72, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 18.194.0.0/15, region: eu-central-1
 	{&net.IPNet{IP: []byte{18, 194, 0, 0}, Mask: []byte{255, 254, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-central-1"}},
 	// AWS: 52.46.64.0/20, region: eu-west-3
@@ -9685,6 +9741,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{69, 107, 10, 72}, Mask: []byte{255, 255, 255, 248}}, IPInfo{cloud: "AWS", region: "us-west-1"}},
 	// AWS: 69.107.11.96/29, region: eu-north-1
 	{&net.IPNet{IP: []byte{69, 107, 11, 96}, Mask: []byte{255, 255, 255, 248}}, IPInfo{cloud: "AWS", region: "eu-north-1"}},
+	// AWS: 80.126.9.0/24, region: GLOBAL
+	{&net.IPNet{IP: []byte{80, 126, 9, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
 	// AWS: 99.82.168.0/24, region: ap-northeast-2
 	{&net.IPNet{IP: []byte{99, 82, 168, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "ap-northeast-2"}},
 	// AWS: 104.255.59.137/32, region: ap-northeast-1
@@ -10783,6 +10841,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{15, 230, 190, 0}, Mask: []byte{255, 255, 255, 128}}, IPInfo{cloud: "AWS", region: "eu-west-2"}},
 	// AWS: 15.248.161.0/24, region: us-west-2
 	{&net.IPNet{IP: []byte{15, 248, 161, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "us-west-2"}},
+	// AWS: 16.15.64.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 64, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 23.228.228.0/22, region: us-east-1
 	{&net.IPNet{IP: []byte{23, 228, 228, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 35.55.127.0/24, region: us-west-2
@@ -11061,6 +11121,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{15, 168, 40, 128}, Mask: []byte{255, 255, 255, 128}}, IPInfo{cloud: "AWS", region: "ap-northeast-3"}},
 	// AWS: 15.168.96.0/22, region: ap-northeast-3
 	{&net.IPNet{IP: []byte{15, 168, 96, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "ap-northeast-3"}},
+	// AWS: 16.208.142.0/23, region: ap-northeast-3
+	{&net.IPNet{IP: []byte{16, 208, 142, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "ap-northeast-3"}},
 	// AWS: 56.155.19.0/24, region: ap-northeast-3
 	{&net.IPNet{IP: []byte{56, 155, 19, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "ap-northeast-3"}},
 	// AWS: 13.200.90.0/23, region: ap-south-1
@@ -11297,6 +11359,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{15, 156, 38, 0}, Mask: []byte{255, 255, 255, 224}}, IPInfo{cloud: "AWS", region: "ca-central-1"}},
 	// AWS: 15.156.38.64/26, region: ca-central-1
 	{&net.IPNet{IP: []byte{15, 156, 38, 64}, Mask: []byte{255, 255, 255, 192}}, IPInfo{cloud: "AWS", region: "ca-central-1"}},
+	// AWS: 15.175.250.0/23, region: ca-central-1
+	{&net.IPNet{IP: []byte{15, 175, 250, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "ca-central-1"}},
 	// AWS: 15.222.43.128/26, region: ca-central-1
 	{&net.IPNet{IP: []byte{15, 222, 43, 128}, Mask: []byte{255, 255, 255, 192}}, IPInfo{cloud: "AWS", region: "ca-central-1"}},
 	// AWS: 15.222.43.32/27, region: ca-central-1
@@ -11529,6 +11593,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{3, 254, 236, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "eu-west-1"}},
 	// AWS: 3.254.8.0/25, region: eu-west-1
 	{&net.IPNet{IP: []byte{3, 254, 8, 0}, Mask: []byte{255, 255, 255, 128}}, IPInfo{cloud: "AWS", region: "eu-west-1"}},
+	// AWS: 40.180.170.192/26, region: eu-west-1
+	{&net.IPNet{IP: []byte{40, 180, 170, 192}, Mask: []byte{255, 255, 255, 192}}, IPInfo{cloud: "AWS", region: "eu-west-1"}},
 	// AWS: 40.180.9.0/25, region: eu-west-1
 	{&net.IPNet{IP: []byte{40, 180, 9, 0}, Mask: []byte{255, 255, 255, 128}}, IPInfo{cloud: "AWS", region: "eu-west-1"}},
 	// AWS: 54.247.250.0/25, region: eu-west-1
@@ -11713,6 +11779,10 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{54, 20, 156, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "sa-east-1"}},
 	// AWS: 54.20.50.0/23, region: sa-east-1
 	{&net.IPNet{IP: []byte{54, 20, 50, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "sa-east-1"}},
+	// AWS: 83.160.102.0/23, region: sa-west-1
+	{&net.IPNet{IP: []byte{83, 160, 102, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "sa-west-1"}},
+	// AWS: 83.160.104.0/23, region: sa-west-1
+	{&net.IPNet{IP: []byte{83, 160, 104, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "sa-west-1"}},
 	// AWS: 83.160.88.0/23, region: sa-west-1
 	{&net.IPNet{IP: []byte{83, 160, 88, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "sa-west-1"}},
 	// AWS: 83.160.92.0/24, region: sa-west-1
@@ -11757,6 +11827,10 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{13, 220, 36, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 13.220.47.0/25, region: us-east-1
 	{&net.IPNet{IP: []byte{13, 220, 47, 0}, Mask: []byte{255, 255, 255, 128}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
+	// AWS: 184.195.220.128/25, region: us-east-1
+	{&net.IPNet{IP: []byte{184, 195, 220, 128}, Mask: []byte{255, 255, 255, 128}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
+	// AWS: 184.195.222.0/23, region: us-east-1
+	{&net.IPNet{IP: []byte{184, 195, 222, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 3.227.250.128/25, region: us-east-1
 	{&net.IPNet{IP: []byte{3, 227, 250, 128}, Mask: []byte{255, 255, 255, 128}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 3.234.248.192/26, region: us-east-1
@@ -12137,6 +12211,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{16, 12, 6, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "ap-east-1"}},
 	// AWS: 16.12.32.0/22, region: eu-central-1
 	{&net.IPNet{IP: []byte{16, 12, 32, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "eu-central-1"}},
+	// AWS: 16.15.120.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 120, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 52.219.204.0/22, region: ap-northeast-2
 	{&net.IPNet{IP: []byte{52, 219, 204, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "ap-northeast-2"}},
 	// AWS: 76.223.102.0/24, region: GLOBAL
@@ -12277,6 +12353,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{52, 219, 0, 0}, Mask: []byte{255, 255, 240, 0}}, IPInfo{cloud: "AWS", region: "ap-northeast-1"}},
 	// AWS: 3.5.252.0/22, region: ca-central-1
 	{&net.IPNet{IP: []byte{3, 5, 252, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "ca-central-1"}},
+	// AWS: 16.15.96.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 96, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 13.248.231.0/24, region: GLOBAL
 	{&net.IPNet{IP: []byte{13, 248, 231, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
 	// AWS: 16.15.48.0/23, region: ap-southeast-1
@@ -12287,6 +12365,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{76, 223, 104, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
 	// AWS: 16.12.88.0/21, region: us-west-2
 	{&net.IPNet{IP: []byte{16, 12, 88, 0}, Mask: []byte{255, 255, 248, 0}}, IPInfo{cloud: "AWS", region: "us-west-2"}},
+	// AWS: 16.15.112.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 112, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 16.15.20.0/22, region: eu-central-1
 	{&net.IPNet{IP: []byte{16, 15, 20, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "eu-central-1"}},
 	// AWS: 52.219.32.0/21, region: ap-southeast-1
@@ -12371,6 +12451,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{16, 12, 36, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "ap-south-1"}},
 	// AWS: 3.5.44.0/22, region: ap-south-2
 	{&net.IPNet{IP: []byte{3, 5, 44, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "ap-south-2"}},
+	// AWS: 16.15.76.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 76, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 13.248.228.0/24, region: GLOBAL
 	{&net.IPNet{IP: []byte{13, 248, 228, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
 	// AWS: 52.219.180.0/22, region: ap-southeast-1
@@ -12383,6 +12465,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{16, 12, 112, 0}, Mask: []byte{255, 255, 248, 0}}, IPInfo{cloud: "AWS", region: "us-west-2"}},
 	// AWS: 3.2.103.0/24, region: us-east-1
 	{&net.IPNet{IP: []byte{3, 2, 103, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
+	// AWS: 16.15.84.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 84, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 3.2.120.0/24, region: ap-northeast-3
 	{&net.IPNet{IP: []byte{3, 2, 120, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "ap-northeast-3"}},
 	// AWS: 83.118.240.0/21, region: eusc-de-east-1
@@ -12395,6 +12479,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{16, 12, 76, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-7"}},
 	// AWS: 16.12.81.0/24, region: ap-southeast-6
 	{&net.IPNet{IP: []byte{16, 12, 81, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-6"}},
+	// AWS: 16.15.100.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 100, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 3.2.116.0/24, region: ap-south-1
 	{&net.IPNet{IP: []byte{3, 2, 116, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "ap-south-1"}},
 	// AWS: 3.5.64.0/21, region: eu-west-1
@@ -12405,10 +12491,14 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{52, 219, 136, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "ap-northeast-1"}},
 	// AWS: 54.222.52.0/22, region: cn-north-1
 	{&net.IPNet{IP: []byte{54, 222, 52, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "cn-north-1"}},
+	// AWS: 16.15.108.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 108, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 3.5.132.0/23, region: us-east-2
 	{&net.IPNet{IP: []byte{3, 5, 132, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "us-east-2"}},
 	// AWS: 16.15.54.0/23, region: ap-northeast-1
 	{&net.IPNet{IP: []byte{16, 15, 54, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "ap-northeast-1"}},
+	// AWS: 16.15.80.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 80, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 3.2.122.0/24, region: ap-southeast-2
 	{&net.IPNet{IP: []byte{3, 2, 122, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-2"}},
 	// AWS: 3.5.104.0/22, region: us-east-2
@@ -12483,8 +12573,12 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{52, 219, 200, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "ap-northeast-1"}},
 	// AWS: 3.5.216.0/22, region: eu-north-1
 	{&net.IPNet{IP: []byte{3, 5, 216, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "eu-north-1"}},
+	// AWS: 16.15.88.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 88, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 52.219.202.0/23, region: ap-northeast-2
 	{&net.IPNet{IP: []byte{52, 219, 202, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "ap-northeast-2"}},
+	// AWS: 16.15.116.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 116, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 3.5.146.0/23, region: ap-southeast-1
 	{&net.IPNet{IP: []byte{3, 5, 146, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-1"}},
 	// AWS: 3.5.172.0/22, region: ca-west-1
@@ -12587,6 +12681,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{3, 5, 192, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "mx-central-1"}},
 	// AWS: 16.15.32.0/20, region: us-west-2
 	{&net.IPNet{IP: []byte{16, 15, 32, 0}, Mask: []byte{255, 255, 240, 0}}, IPInfo{cloud: "AWS", region: "us-west-2"}},
+	// AWS: 16.15.104.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 104, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 52.219.169.0/24, region: eu-central-1
 	{&net.IPNet{IP: []byte{52, 219, 169, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "eu-central-1"}},
 	// AWS: 54.222.65.0/24, region: cn-north-1
@@ -12609,6 +12705,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{3, 5, 244, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "eu-west-2"}},
 	// AWS: 16.12.18.0/23, region: eu-west-3
 	{&net.IPNet{IP: []byte{16, 12, 18, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "eu-west-3"}},
+	// AWS: 16.15.92.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 92, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 52.219.140.0/24, region: eu-central-1
 	{&net.IPNet{IP: []byte{52, 219, 140, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "eu-central-1"}},
 	// AWS: 52.219.254.0/24, region: eu-south-1
@@ -12617,6 +12715,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{52, 95, 188, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "me-central-1"}},
 	// AWS: 13.248.232.0/24, region: GLOBAL
 	{&net.IPNet{IP: []byte{13, 248, 232, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
+	// AWS: 16.15.68.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 68, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 52.95.163.0/24, region: sa-east-1
 	{&net.IPNet{IP: []byte{52, 95, 163, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "sa-east-1"}},
 	// AWS: 3.5.32.0/22, region: eu-south-2
@@ -12659,6 +12759,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{52, 219, 216, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "us-west-1"}},
 	// AWS: 16.15.160.0/22, region: us-east-1
 	{&net.IPNet{IP: []byte{16, 15, 160, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
+	// AWS: 16.15.72.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 72, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 52.219.152.0/22, region: ap-northeast-1
 	{&net.IPNet{IP: []byte{52, 219, 152, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "ap-northeast-1"}},
 	// AWS: 16.12.40.0/23, region: ap-south-1
@@ -12715,6 +12817,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{3, 5, 224, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "eu-west-3"}},
 	// AWS: 52.82.188.0/22, region: cn-northwest-1
 	{&net.IPNet{IP: []byte{52, 82, 188, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "cn-northwest-1"}},
+	// AWS: 16.15.64.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 64, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 140.179.36.208/28, region: cn-north-1
 	{&net.IPNet{IP: []byte{140, 179, 36, 208}, Mask: []byte{255, 255, 255, 240}}, IPInfo{cloud: "AWS", region: "cn-north-1"}},
 	// AWS: 140.179.36.224/28, region: cn-north-1
@@ -13507,6 +13611,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{15, 103, 0, 0}, Mask: []byte{255, 255, 0, 0}}, IPInfo{cloud: "AWS", region: "af-south-1"}},
 	// AWS: 15.177.100.0/24, region: ca-west-1
 	{&net.IPNet{IP: []byte{15, 177, 100, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "ca-west-1"}},
+	// AWS: 16.15.120.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 120, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 43.206.0.0/15, region: ap-northeast-1
 	{&net.IPNet{IP: []byte{43, 206, 0, 0}, Mask: []byte{255, 254, 0, 0}}, IPInfo{cloud: "AWS", region: "ap-northeast-1"}},
 	// AWS: 43.226.27.0/24, region: us-west-2
@@ -13983,6 +14089,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{18, 231, 0, 0}, Mask: []byte{255, 255, 0, 0}}, IPInfo{cloud: "AWS", region: "sa-east-1"}},
 	// AWS: 23.228.197.0/24, region: GLOBAL
 	{&net.IPNet{IP: []byte{23, 228, 197, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
+	// AWS: 54.25.192.0/18, region: GLOBAL
+	{&net.IPNet{IP: []byte{54, 25, 192, 0}, Mask: []byte{255, 255, 192, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
 	// AWS: 54.252.0.0/16, region: ap-southeast-2
 	{&net.IPNet{IP: []byte{54, 252, 0, 0}, Mask: []byte{255, 255, 0, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-2"}},
 	// AWS: 64.252.125.0/24, region: us-east-1
@@ -14281,6 +14389,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{15, 193, 164, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-2"}},
 	// AWS: 15.220.232.0/24, region: ap-south-1
 	{&net.IPNet{IP: []byte{15, 220, 232, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "ap-south-1"}},
+	// AWS: 16.15.96.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 96, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 23.20.0.0/14, region: us-east-1
 	{&net.IPNet{IP: []byte{23, 20, 0, 0}, Mask: []byte{255, 252, 0, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 35.54.64.0/18, region: us-east-1
@@ -14373,6 +14483,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{216, 198, 194, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "us-east-2"}},
 	// AWS: 3.44.0.0/18, region: ap-southeast-1
 	{&net.IPNet{IP: []byte{3, 44, 0, 0}, Mask: []byte{255, 255, 192, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-1"}},
+	// AWS: 16.15.112.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 112, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 99.151.190.0/23, region: us-east-1
 	{&net.IPNet{IP: []byte{99, 151, 190, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 15.129.66.0/23, region: us-west-1
@@ -14879,6 +14991,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{216, 198, 193, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 3.5.44.0/22, region: ap-south-2
 	{&net.IPNet{IP: []byte{3, 5, 44, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "ap-south-2"}},
+	// AWS: 16.15.76.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 76, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 35.71.93.0/24, region: ap-southeast-6
 	{&net.IPNet{IP: []byte{35, 71, 93, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-6"}},
 	// AWS: 35.71.127.0/24, region: ap-east-2
@@ -14937,6 +15051,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{3, 2, 103, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 15.129.78.0/24, region: eu-west-3
 	{&net.IPNet{IP: []byte{15, 129, 78, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "eu-west-3"}},
+	// AWS: 16.15.84.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 84, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 44.224.0.0/11, region: us-west-2
 	{&net.IPNet{IP: []byte{44, 224, 0, 0}, Mask: []byte{255, 224, 0, 0}}, IPInfo{cloud: "AWS", region: "us-west-2"}},
 	// AWS: 52.81.0.0/16, region: cn-north-1
@@ -15023,6 +15139,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{15, 181, 224, 0}, Mask: []byte{255, 255, 248, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 15.220.227.0/24, region: ap-south-1
 	{&net.IPNet{IP: []byte{15, 220, 227, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "ap-south-1"}},
+	// AWS: 16.15.100.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 100, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 18.208.0.0/13, region: us-east-1
 	{&net.IPNet{IP: []byte{18, 208, 0, 0}, Mask: []byte{255, 248, 0, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 52.95.245.0/24, region: us-east-1
@@ -15089,6 +15207,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{99, 77, 158, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "eu-central-1"}},
 	// AWS: 99.77.241.0/24, region: ap-east-1
 	{&net.IPNet{IP: []byte{99, 77, 241, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "ap-east-1"}},
+	// AWS: 16.15.108.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 108, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 18.99.240.0/20, region: us-gov-west-1
 	{&net.IPNet{IP: []byte{18, 99, 240, 0}, Mask: []byte{255, 255, 240, 0}}, IPInfo{cloud: "AWS", region: "us-gov-west-1"}},
 	// AWS: 18.188.0.0/16, region: us-east-2
@@ -15145,6 +15265,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{13, 158, 0, 0}, Mask: []byte{255, 254, 0, 0}}, IPInfo{cloud: "AWS", region: "ap-northeast-1"}},
 	// AWS: 15.220.16.0/20, region: us-west-2
 	{&net.IPNet{IP: []byte{15, 220, 16, 0}, Mask: []byte{255, 255, 240, 0}}, IPInfo{cloud: "AWS", region: "us-west-2"}},
+	// AWS: 16.15.80.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 80, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 16.192.0.0/16, region: eu-north-1
 	{&net.IPNet{IP: []byte{16, 192, 0, 0}, Mask: []byte{255, 255, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-north-1"}},
 	// AWS: 192.31.213.0/24, region: ap-northeast-3
@@ -15287,6 +15409,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{52, 95, 246, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "us-west-1"}},
 	// AWS: 13.48.0.0/15, region: eu-north-1
 	{&net.IPNet{IP: []byte{13, 48, 0, 0}, Mask: []byte{255, 254, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-north-1"}},
+	// AWS: 35.54.63.0/24, region: us-west-2
+	{&net.IPNet{IP: []byte{35, 54, 63, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "us-west-2"}},
 	// AWS: 52.64.0.0/17, region: ap-southeast-2
 	{&net.IPNet{IP: []byte{52, 64, 0, 0}, Mask: []byte{255, 255, 128, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-2"}},
 	// AWS: 52.95.239.0/24, region: eu-west-2
@@ -15481,6 +15605,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{35, 55, 19, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "eu-west-1"}},
 	// AWS: 54.46.0.0/17, region: ap-east-1
 	{&net.IPNet{IP: []byte{54, 46, 0, 0}, Mask: []byte{255, 255, 128, 0}}, IPInfo{cloud: "AWS", region: "ap-east-1"}},
+	// AWS: 64.113.223.0/24, region: us-west-2
+	{&net.IPNet{IP: []byte{64, 113, 223, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "us-west-2"}},
 	// AWS: 99.151.96.0/21, region: us-gov-east-1
 	{&net.IPNet{IP: []byte{99, 151, 96, 0}, Mask: []byte{255, 255, 248, 0}}, IPInfo{cloud: "AWS", region: "us-gov-east-1"}},
 	// AWS: 1.178.31.0/24, region: ap-east-2
@@ -15573,6 +15699,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{13, 202, 0, 0}, Mask: []byte{255, 254, 0, 0}}, IPInfo{cloud: "AWS", region: "ap-south-1"}},
 	// AWS: 15.181.64.0/20, region: us-west-2
 	{&net.IPNet{IP: []byte{15, 181, 64, 0}, Mask: []byte{255, 255, 240, 0}}, IPInfo{cloud: "AWS", region: "us-west-2"}},
+	// AWS: 16.15.88.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 88, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 16.25.0.0/16, region: me-south-1
 	{&net.IPNet{IP: []byte{16, 25, 0, 0}, Mask: []byte{255, 255, 0, 0}}, IPInfo{cloud: "AWS", region: "me-south-1"}},
 	// AWS: 99.77.140.0/24, region: ap-northeast-3
@@ -15589,6 +15717,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{216, 198, 230, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "eu-west-1"}},
 	// AWS: 15.206.0.0/15, region: ap-south-1
 	{&net.IPNet{IP: []byte{15, 206, 0, 0}, Mask: []byte{255, 254, 0, 0}}, IPInfo{cloud: "AWS", region: "ap-south-1"}},
+	// AWS: 16.15.116.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 116, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 35.55.40.0/24, region: eu-north-1
 	{&net.IPNet{IP: []byte{35, 55, 40, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "eu-north-1"}},
 	// AWS: 40.163.0.0/24, region: us-east-1
@@ -16005,8 +16135,6 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{51, 74, 128, 0}, Mask: []byte{255, 255, 192, 0}}, IPInfo{cloud: "AWS", region: "eusc-de-east-1"}},
 	// AWS: 54.194.0.0/15, region: eu-west-1
 	{&net.IPNet{IP: []byte{54, 194, 0, 0}, Mask: []byte{255, 254, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-west-1"}},
-	// AWS: 1.178.86.0/24, region: ap-southeast-3
-	{&net.IPNet{IP: []byte{1, 178, 86, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-3"}},
 	// AWS: 3.2.106.0/24, region: us-west-2
 	{&net.IPNet{IP: []byte{3, 2, 106, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "us-west-2"}},
 	// AWS: 15.129.80.0/22, region: eu-west-1
@@ -16163,6 +16291,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{1, 178, 24, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-4"}},
 	// AWS: 54.26.166.0/24, region: us-east-1
 	{&net.IPNet{IP: []byte{54, 26, 166, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
+	// AWS: 64.113.192.0/22, region: us-west-2
+	{&net.IPNet{IP: []byte{64, 113, 192, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-west-2"}},
 	// AWS: 99.77.163.0/24, region: il-central-1
 	{&net.IPNet{IP: []byte{99, 77, 163, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "il-central-1"}},
 	// AWS: 155.146.32.0/20, region: us-east-1
@@ -16243,6 +16373,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{15, 220, 248, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 16.15.32.0/20, region: us-west-2
 	{&net.IPNet{IP: []byte{16, 15, 32, 0}, Mask: []byte{255, 255, 240, 0}}, IPInfo{cloud: "AWS", region: "us-west-2"}},
+	// AWS: 16.15.104.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 104, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 52.95.225.0/24, region: ap-northeast-3
 	{&net.IPNet{IP: []byte{52, 95, 225, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "ap-northeast-3"}},
 	// AWS: 54.222.65.0/24, region: cn-north-1
@@ -16357,6 +16489,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{198, 41, 103, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "us-east-2"}},
 	// AWS: 3.5.244.0/22, region: eu-west-2
 	{&net.IPNet{IP: []byte{3, 5, 244, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "eu-west-2"}},
+	// AWS: 16.15.92.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 92, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 18.253.0.0/16, region: us-gov-east-1
 	{&net.IPNet{IP: []byte{18, 253, 0, 0}, Mask: []byte{255, 255, 0, 0}}, IPInfo{cloud: "AWS", region: "us-gov-east-1"}},
 	// AWS: 43.193.65.0/24, region: cn-northwest-1
@@ -16381,6 +16515,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{15, 129, 64, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 63.184.0.0/13, region: eu-central-1
 	{&net.IPNet{IP: []byte{63, 184, 0, 0}, Mask: []byte{255, 248, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-central-1"}},
+	// AWS: 16.15.68.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 68, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 18.153.0.0/16, region: eu-central-1
 	{&net.IPNet{IP: []byte{18, 153, 0, 0}, Mask: []byte{255, 255, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-central-1"}},
 	// AWS: 18.202.0.0/15, region: eu-west-1
@@ -16643,6 +16779,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{15, 177, 0, 0}, Mask: []byte{255, 255, 192, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
 	// AWS: 15.181.244.0/24, region: us-east-1
 	{&net.IPNet{IP: []byte{15, 181, 244, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
+	// AWS: 16.15.72.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 72, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 18.194.0.0/15, region: eu-central-1
 	{&net.IPNet{IP: []byte{18, 194, 0, 0}, Mask: []byte{255, 254, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-central-1"}},
 	// AWS: 52.94.249.128/28, region: eu-north-1
@@ -17123,6 +17261,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{142, 4, 177, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "ap-south-1"}},
 	// AWS: 15.177.68.0/23, region: eu-central-1
 	{&net.IPNet{IP: []byte{15, 177, 68, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "eu-central-1"}},
+	// AWS: 16.15.64.0/22, region: us-east-1
+	{&net.IPNet{IP: []byte{16, 15, 64, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 23.228.228.0/22, region: us-east-1
 	{&net.IPNet{IP: []byte{23, 228, 228, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 35.55.127.0/24, region: us-west-2
@@ -18507,6 +18647,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{157, 241, 2, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "AWS", region: "me-south-1"}},
 	// AWS: 157.241.25.0/24, region: me-south-1
 	{&net.IPNet{IP: []byte{157, 241, 25, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "me-south-1"}},
+	// AWS: 51.168.118.0/24, region: me-west-1
+	{&net.IPNet{IP: []byte{51, 168, 118, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "me-west-1"}},
 	// AWS: 78.12.16.0/24, region: mx-central-1
 	{&net.IPNet{IP: []byte{78, 12, 16, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "AWS", region: "mx-central-1"}},
 	// AWS: 15.228.129.0/24, region: sa-east-1
@@ -20253,6 +20395,10 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{16, 164, 136, 0}, Mask: []byte{255, 255, 255, 128}}, IPInfo{cloud: "AWS", region: "il-central-1"}},
 	// AWS: 16.164.160.0/22, region: il-central-1
 	{&net.IPNet{IP: []byte{16, 164, 160, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "il-central-1"}},
+	// AWS: 51.168.180.128/25, region: me-west-1
+	{&net.IPNet{IP: []byte{51, 168, 180, 128}, Mask: []byte{255, 255, 255, 128}}, IPInfo{cloud: "AWS", region: "me-west-1"}},
+	// AWS: 51.168.188.0/22, region: me-west-1
+	{&net.IPNet{IP: []byte{51, 168, 188, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "AWS", region: "me-west-1"}},
 	// AWS: 78.14.149.0/25, region: mx-central-1
 	{&net.IPNet{IP: []byte{78, 14, 149, 0}, Mask: []byte{255, 255, 255, 128}}, IPInfo{cloud: "AWS", region: "mx-central-1"}},
 	// AWS: 78.14.176.0/22, region: mx-central-1
@@ -21181,6 +21327,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{38, 0, 240, 240, 17, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "ap-northeast-2"}},
 	// AWS: 2600:f0f0:8108::/48, region: eu-west-3
 	{&net.IPNet{IP: []byte{38, 0, 240, 240, 129, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-west-3"}},
+	// AWS: 2600:f0fb:c900:7000::/52, region: us-east-1
+	{&net.IPNet{IP: []byte{38, 0, 240, 251, 201, 0, 112, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 2606:f40:ffef::/48, region: ap-southeast-2
 	{&net.IPNet{IP: []byte{38, 6, 15, 64, 255, 239, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-2"}},
 	// AWS: 2606:7b40:1b07:4000::/56, region: ap-southeast-2
@@ -21307,6 +21455,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{38, 0, 240, 243, 240, 16, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "me-central-1"}},
 	// AWS: 2600:f0f3:f010:2100::/56, region: eu-south-1
 	{&net.IPNet{IP: []byte{38, 0, 240, 243, 240, 16, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-south-1"}},
+	// AWS: 2600:f0fb:c900:8000::/52, region: us-east-1
+	{&net.IPNet{IP: []byte{38, 0, 240, 251, 201, 0, 128, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 2a05:d074:2000::/40, region: eu-west-3
 	{&net.IPNet{IP: []byte{42, 5, 208, 116, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-west-3"}},
 	// AWS: 2406:da36:7000::/40, region: me-central-1
@@ -21419,6 +21569,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{38, 0, 240, 240, 193, 51, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "us-west-2"}},
 	// AWS: 2600:f0f0:c14b::/48, region: eu-west-2
 	{&net.IPNet{IP: []byte{38, 0, 240, 240, 193, 75, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-west-2"}},
+	// AWS: 2600:f0fb:c801::/48, region: us-east-1
+	{&net.IPNet{IP: []byte{38, 0, 240, 251, 200, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 2a05:d06a:e000::/40, region: me-south-1
 	{&net.IPNet{IP: []byte{42, 5, 208, 106, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "me-south-1"}},
 	// AWS: 2406:da70:6000::/40, region: ap-northeast-3
@@ -21445,6 +21597,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{38, 0, 240, 240, 97, 51, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-south-2"}},
 	// AWS: 2600:f0f3:f010:3400::/56, region: us-east-1
 	{&net.IPNet{IP: []byte{38, 0, 240, 243, 240, 16, 52, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
+	// AWS: 2600:f0fb:c802::/48, region: ap-southeast-1
+	{&net.IPNet{IP: []byte{38, 0, 240, 251, 200, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-1"}},
 	// AWS: 2606:7b40:10f4:32c0::/60, region: us-east-2
 	{&net.IPNet{IP: []byte{38, 6, 123, 64, 16, 244, 50, 192, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "us-east-2"}},
 	// AWS: 2606:7b40:1a4f:8000::/60, region: us-west-1
@@ -22359,6 +22513,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{38, 0, 240, 240, 0, 133, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "us-west-2"}},
 	// AWS: 2600:f0f0:c00:200::/56, region: GLOBAL
 	{&net.IPNet{IP: []byte{38, 0, 240, 240, 12, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
+	// AWS: 2600:f0fb:ca00:3000::/52, region: us-east-1
+	{&net.IPNet{IP: []byte{38, 0, 240, 251, 202, 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 2600:f0fb:f106::/48, region: ap-east-1
 	{&net.IPNet{IP: []byte{38, 0, 240, 251, 241, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "ap-east-1"}},
 	// AWS: 2606:f40:ffe8::/48, region: eu-west-2
@@ -22587,6 +22743,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{38, 0, 240, 240, 6, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 254, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 2600:f0f0:6138::/48, region: ap-northeast-3
 	{&net.IPNet{IP: []byte{38, 0, 240, 240, 97, 56, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "ap-northeast-3"}},
+	// AWS: 2600:f0fb:c803::/48, region: eu-west-1
+	{&net.IPNet{IP: []byte{38, 0, 240, 251, 200, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-west-1"}},
 	// AWS: 2620:107:4000:ff::/64, region: us-east-1
 	{&net.IPNet{IP: []byte{38, 32, 1, 7, 64, 0, 0, 255, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 2620:107:4000:8300::/56, region: sa-west-1
@@ -25833,6 +25991,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{38, 0, 240, 240, 97, 52, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "ap-south-1"}},
 	// AWS: 2600:f0f1:8801::/48, region: us-east-1
 	{&net.IPNet{IP: []byte{38, 0, 240, 241, 136, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
+	// AWS: 2600:f0fb:ca00:4000::/52, region: us-east-1
+	{&net.IPNet{IP: []byte{38, 0, 240, 251, 202, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 2606:f40:a800::/40, region: ap-southeast-1
 	{&net.IPNet{IP: []byte{38, 6, 15, 64, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-1"}},
 	// AWS: 2606:7b40:1a47:4340::/60, region: ap-southeast-2
@@ -27021,6 +27181,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{38, 0, 240, 240, 97, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-south-1"}},
 	// AWS: 2600:f0f1:4200::/42, region: eu-central-1
 	{&net.IPNet{IP: []byte{38, 0, 240, 241, 66, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-central-1"}},
+	// AWS: 2600:f0fb:c804::/48, region: us-west-1
+	{&net.IPNet{IP: []byte{38, 0, 240, 251, 200, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "us-west-1"}},
 	// AWS: 2606:f40:a400::/40, region: ap-northeast-2
 	{&net.IPNet{IP: []byte{38, 6, 15, 64, 164, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "ap-northeast-2"}},
 	// AWS: 2606:7b40:10f4:3200::/60, region: us-east-2
@@ -29375,6 +29537,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{38, 0, 240, 240, 17, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "ap-northeast-2"}},
 	// AWS: 2600:f0f0:8108::/48, region: eu-west-3
 	{&net.IPNet{IP: []byte{38, 0, 240, 240, 129, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-west-3"}},
+	// AWS: 2600:f0fb:c900:7000::/52, region: us-east-1
+	{&net.IPNet{IP: []byte{38, 0, 240, 251, 201, 0, 112, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 2606:f40:ffef::/48, region: ap-southeast-2
 	{&net.IPNet{IP: []byte{38, 6, 15, 64, 255, 239, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-2"}},
 	// AWS: 2606:7b40:1b07:4000::/56, region: ap-southeast-2
@@ -29475,6 +29639,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{38, 0, 240, 243, 240, 16, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "me-central-1"}},
 	// AWS: 2600:f0f3:f010:2100::/56, region: eu-south-1
 	{&net.IPNet{IP: []byte{38, 0, 240, 243, 240, 16, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-south-1"}},
+	// AWS: 2600:f0fb:c900:8000::/52, region: us-east-1
+	{&net.IPNet{IP: []byte{38, 0, 240, 251, 201, 0, 128, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 2a05:d074:2000::/40, region: eu-west-3
 	{&net.IPNet{IP: []byte{42, 5, 208, 116, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-west-3"}},
 	// AWS: 2406:da36:7000::/40, region: me-central-1
@@ -29575,6 +29741,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{38, 0, 240, 240, 193, 51, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "us-west-2"}},
 	// AWS: 2600:f0f0:c14b::/48, region: eu-west-2
 	{&net.IPNet{IP: []byte{38, 0, 240, 240, 193, 75, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-west-2"}},
+	// AWS: 2600:f0fb:c801::/48, region: us-east-1
+	{&net.IPNet{IP: []byte{38, 0, 240, 251, 200, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 2a05:d06a:e000::/40, region: me-south-1
 	{&net.IPNet{IP: []byte{42, 5, 208, 106, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "me-south-1"}},
 	// AWS: 2406:da70:6000::/40, region: ap-northeast-3
@@ -29591,6 +29759,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{38, 0, 240, 240, 97, 51, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-south-2"}},
 	// AWS: 2600:f0f3:f010:3400::/56, region: us-east-1
 	{&net.IPNet{IP: []byte{38, 0, 240, 243, 240, 16, 52, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
+	// AWS: 2600:f0fb:c802::/48, region: ap-southeast-1
+	{&net.IPNet{IP: []byte{38, 0, 240, 251, 200, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-1"}},
 	// AWS: 2606:7b40:10f4:32c0::/60, region: us-east-2
 	{&net.IPNet{IP: []byte{38, 6, 123, 64, 16, 244, 50, 192, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "us-east-2"}},
 	// AWS: 2606:7b40:1a4f:8000::/60, region: us-west-1
@@ -30317,6 +30487,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{38, 0, 240, 240, 0, 133, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "us-west-2"}},
 	// AWS: 2600:f0f0:c00:200::/56, region: GLOBAL
 	{&net.IPNet{IP: []byte{38, 0, 240, 240, 12, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "GLOBAL"}},
+	// AWS: 2600:f0fb:ca00:3000::/52, region: us-east-1
+	{&net.IPNet{IP: []byte{38, 0, 240, 251, 202, 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 2600:f0fb:f106::/48, region: ap-east-1
 	{&net.IPNet{IP: []byte{38, 0, 240, 251, 241, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "ap-east-1"}},
 	// AWS: 2606:f40:ffe8::/48, region: eu-west-2
@@ -30489,6 +30661,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{38, 0, 240, 240, 6, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 254, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 2600:f0f0:6138::/48, region: ap-northeast-3
 	{&net.IPNet{IP: []byte{38, 0, 240, 240, 97, 56, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "ap-northeast-3"}},
+	// AWS: 2600:f0fb:c803::/48, region: eu-west-1
+	{&net.IPNet{IP: []byte{38, 0, 240, 251, 200, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-west-1"}},
 	// AWS: 2a05:d06b:2000::/40, region: eu-west-3
 	{&net.IPNet{IP: []byte{42, 5, 208, 107, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-west-3"}},
 	// AWS: 2a05:d06b:4800::/40, region: eu-central-1
@@ -33163,6 +33337,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{38, 0, 240, 240, 97, 52, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "ap-south-1"}},
 	// AWS: 2600:f0f1:8801::/48, region: us-east-1
 	{&net.IPNet{IP: []byte{38, 0, 240, 241, 136, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
+	// AWS: 2600:f0fb:ca00:4000::/52, region: us-east-1
+	{&net.IPNet{IP: []byte{38, 0, 240, 251, 202, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "us-east-1"}},
 	// AWS: 2606:f40:a800::/40, region: ap-southeast-1
 	{&net.IPNet{IP: []byte{38, 6, 15, 64, 168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "ap-southeast-1"}},
 	// AWS: 2606:7b40:1a47:4340::/60, region: ap-southeast-2
@@ -34133,6 +34309,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{38, 0, 240, 240, 97, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-south-1"}},
 	// AWS: 2600:f0f1:4200::/42, region: eu-central-1
 	{&net.IPNet{IP: []byte{38, 0, 240, 241, 66, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "eu-central-1"}},
+	// AWS: 2600:f0fb:c804::/48, region: us-west-1
+	{&net.IPNet{IP: []byte{38, 0, 240, 251, 200, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "us-west-1"}},
 	// AWS: 2606:f40:a400::/40, region: ap-northeast-2
 	{&net.IPNet{IP: []byte{38, 6, 15, 64, 164, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "ap-northeast-2"}},
 	// AWS: 2606:7b40:10f4:3200::/60, region: us-east-2
@@ -34793,6 +34971,10 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{42, 5, 208, 37, 4, 193, 71, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "il-central-1"}},
 	// AWS: 2a05:d025:9d2:eb00::/56, region: il-central-1
 	{&net.IPNet{IP: []byte{42, 5, 208, 37, 9, 210, 235, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "il-central-1"}},
+	// AWS: 2a05:d010:82c4:9400::/56, region: me-west-1
+	{&net.IPNet{IP: []byte{42, 5, 208, 16, 130, 196, 148, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "me-west-1"}},
+	// AWS: 2a05:d010:83b8:6100::/56, region: me-west-1
+	{&net.IPNet{IP: []byte{42, 5, 208, 16, 131, 184, 97, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "me-west-1"}},
 	// AWS: 2600:1f17:4cae:a000::/56, region: mx-central-1
 	{&net.IPNet{IP: []byte{38, 0, 31, 23, 76, 174, 160, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "AWS", region: "mx-central-1"}},
 	// AWS: 2600:1f17:4ce9:6400::/56, region: mx-central-1
@@ -35251,10 +35433,14 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{34, 183, 36, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "asia-south1"}},
 	// GCP: 34.183.106.0/23, region: asia-south1
 	{&net.IPNet{IP: []byte{34, 183, 106, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "GCP", region: "asia-south1"}},
+	// GCP: 34.183.136.0/22, region: asia-south1
+	{&net.IPNet{IP: []byte{34, 183, 136, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "GCP", region: "asia-south1"}},
 	// GCP: 34.184.35.0/24, region: asia-south1
 	{&net.IPNet{IP: []byte{34, 184, 35, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "asia-south1"}},
 	// GCP: 34.184.106.0/23, region: asia-south1
 	{&net.IPNet{IP: []byte{34, 184, 106, 0}, Mask: []byte{255, 255, 254, 0}}, IPInfo{cloud: "GCP", region: "asia-south1"}},
+	// GCP: 34.184.136.0/22, region: asia-south1
+	{&net.IPNet{IP: []byte{34, 184, 136, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "GCP", region: "asia-south1"}},
 	// GCP: 35.200.128.0/17, region: asia-south1
 	{&net.IPNet{IP: []byte{35, 200, 128, 0}, Mask: []byte{255, 255, 128, 0}}, IPInfo{cloud: "GCP", region: "asia-south1"}},
 	// GCP: 35.201.41.0/24, region: asia-south1
@@ -35301,10 +35487,14 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{34, 183, 3, 0}, Mask: []byte{255, 255, 255, 128}}, IPInfo{cloud: "GCP", region: "asia-south2"}},
 	// GCP: 34.183.28.0/24, region: asia-south2
 	{&net.IPNet{IP: []byte{34, 183, 28, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "asia-south2"}},
+	// GCP: 34.183.133.0/24, region: asia-south2
+	{&net.IPNet{IP: []byte{34, 183, 133, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "asia-south2"}},
 	// GCP: 34.184.3.0/25, region: asia-south2
 	{&net.IPNet{IP: []byte{34, 184, 3, 0}, Mask: []byte{255, 255, 255, 128}}, IPInfo{cloud: "GCP", region: "asia-south2"}},
 	// GCP: 34.184.23.0/24, region: asia-south2
 	{&net.IPNet{IP: []byte{34, 184, 23, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "asia-south2"}},
+	// GCP: 34.184.133.0/24, region: asia-south2
+	{&net.IPNet{IP: []byte{34, 184, 133, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "asia-south2"}},
 	// GCP: 2600:1900:41b0::/44, region: asia-south2
 	{&net.IPNet{IP: []byte{38, 0, 25, 0, 65, 176, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "GCP", region: "asia-south2"}},
 	// GCP: 2600:1902:80::/44, region: asia-south2
@@ -35367,6 +35557,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{34, 183, 80, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "asia-southeast1"}},
 	// GCP: 34.184.75.0/24, region: asia-southeast1
 	{&net.IPNet{IP: []byte{34, 184, 75, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "asia-southeast1"}},
+	// GCP: 34.184.131.0/24, region: asia-southeast1
+	{&net.IPNet{IP: []byte{34, 184, 131, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "asia-southeast1"}},
 	// GCP: 35.185.176.0/20, region: asia-southeast1
 	{&net.IPNet{IP: []byte{35, 185, 176, 0}, Mask: []byte{255, 255, 240, 0}}, IPInfo{cloud: "GCP", region: "asia-southeast1"}},
 	// GCP: 35.186.144.0/20, region: asia-southeast1
@@ -35405,6 +35597,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{38, 0, 25, 0, 67, 52, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 252, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "GCP", region: "asia-southeast1"}},
 	// GCP: 2600:1902:90::/44, region: asia-southeast1
 	{&net.IPNet{IP: []byte{38, 0, 25, 2, 0, 144, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "GCP", region: "asia-southeast1"}},
+	// GCP: 34.14.224.0/19, region: asia-southeast2
+	{&net.IPNet{IP: []byte{34, 14, 224, 0}, Mask: []byte{255, 255, 224, 0}}, IPInfo{cloud: "GCP", region: "asia-southeast2"}},
 	// GCP: 34.34.216.0/21, region: asia-southeast2
 	{&net.IPNet{IP: []byte{34, 34, 216, 0}, Mask: []byte{255, 255, 248, 0}}, IPInfo{cloud: "GCP", region: "asia-southeast2"}},
 	// GCP: 34.50.64.0/18, region: asia-southeast2
@@ -35543,6 +35737,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{34, 128, 208, 0}, Mask: []byte{255, 255, 240, 0}}, IPInfo{cloud: "GCP", region: "europe-central2"}},
 	// GCP: 34.158.224.0/20, region: europe-central2
 	{&net.IPNet{IP: []byte{34, 158, 224, 0}, Mask: []byte{255, 255, 240, 0}}, IPInfo{cloud: "GCP", region: "europe-central2"}},
+	// GCP: 179.69.192.0/19, region: europe-central2
+	{&net.IPNet{IP: []byte{179, 69, 192, 0}, Mask: []byte{255, 255, 224, 0}}, IPInfo{cloud: "GCP", region: "europe-central2"}},
 	// GCP: 2600:1900:4140::/44, region: europe-central2
 	{&net.IPNet{IP: []byte{38, 0, 25, 0, 65, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "GCP", region: "europe-central2"}},
 	// GCP: 2600:1902:d0::/44, region: europe-central2
@@ -35563,6 +35759,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{35, 228, 0, 0}, Mask: []byte{255, 255, 0, 0}}, IPInfo{cloud: "GCP", region: "europe-north1"}},
 	// GCP: 35.242.26.0/24, region: europe-north1
 	{&net.IPNet{IP: []byte{35, 242, 26, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "europe-north1"}},
+	// GCP: 179.193.128.0/19, region: europe-north1
+	{&net.IPNet{IP: []byte{179, 193, 128, 0}, Mask: []byte{255, 255, 224, 0}}, IPInfo{cloud: "GCP", region: "europe-north1"}},
 	// GCP: 2600:1900:4150::/44, region: europe-north1
 	{&net.IPNet{IP: []byte{38, 0, 25, 0, 65, 80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "GCP", region: "europe-north1"}},
 	// GCP: 2600:1902:e0::/44, region: europe-north1
@@ -36003,6 +36201,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{35, 235, 216, 0}, Mask: []byte{255, 255, 248, 0}}, IPInfo{cloud: "GCP", region: "europe-west6"}},
 	// GCP: 35.242.44.0/24, region: europe-west6
 	{&net.IPNet{IP: []byte{35, 242, 44, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "europe-west6"}},
+	// GCP: 179.69.224.0/19, region: europe-west6
+	{&net.IPNet{IP: []byte{179, 69, 224, 0}, Mask: []byte{255, 255, 224, 0}}, IPInfo{cloud: "GCP", region: "europe-west6"}},
 	// GCP: 2600:1900:4160::/44, region: europe-west6
 	{&net.IPNet{IP: []byte{38, 0, 25, 0, 65, 96, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "GCP", region: "europe-west6"}},
 	// GCP: 2600:1902:170::/44, region: europe-west6
@@ -36031,10 +36231,14 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{34, 183, 0, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "europe-west8"}},
 	// GCP: 34.183.108.0/24, region: europe-west8
 	{&net.IPNet{IP: []byte{34, 183, 108, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "europe-west8"}},
+	// GCP: 34.183.132.0/24, region: europe-west8
+	{&net.IPNet{IP: []byte{34, 183, 132, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "europe-west8"}},
 	// GCP: 34.184.0.0/24, region: europe-west8
 	{&net.IPNet{IP: []byte{34, 184, 0, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "europe-west8"}},
 	// GCP: 34.184.105.0/24, region: europe-west8
 	{&net.IPNet{IP: []byte{34, 184, 105, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "europe-west8"}},
+	// GCP: 34.184.132.0/24, region: europe-west8
+	{&net.IPNet{IP: []byte{34, 184, 132, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "europe-west8"}},
 	// GCP: 35.219.224.0/19, region: europe-west8
 	{&net.IPNet{IP: []byte{35, 219, 224, 0}, Mask: []byte{255, 255, 224, 0}}, IPInfo{cloud: "GCP", region: "europe-west8"}},
 	// GCP: 2600:1901:8110::/44, region: europe-west8
@@ -36297,8 +36501,12 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{34, 177, 65, 128}, Mask: []byte{255, 255, 255, 128}}, IPInfo{cloud: "GCP", region: "northamerica-northeast2"}},
 	// GCP: 34.183.29.0/24, region: northamerica-northeast2
 	{&net.IPNet{IP: []byte{34, 183, 29, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "northamerica-northeast2"}},
+	// GCP: 34.183.131.0/24, region: northamerica-northeast2
+	{&net.IPNet{IP: []byte{34, 183, 131, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "northamerica-northeast2"}},
 	// GCP: 34.184.30.0/24, region: northamerica-northeast2
 	{&net.IPNet{IP: []byte{34, 184, 30, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "northamerica-northeast2"}},
+	// GCP: 34.184.129.0/24, region: northamerica-northeast2
+	{&net.IPNet{IP: []byte{34, 184, 129, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "northamerica-northeast2"}},
 	// GCP: 2600:1900:41e0::/44, region: northamerica-northeast2
 	{&net.IPNet{IP: []byte{38, 0, 25, 0, 65, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "GCP", region: "northamerica-northeast2"}},
 	// GCP: 2600:1902:1e0::/44, region: northamerica-northeast2
@@ -36471,6 +36679,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{34, 183, 76, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "GCP", region: "us-central1"}},
 	// GCP: 34.183.96.0/21, region: us-central1
 	{&net.IPNet{IP: []byte{34, 183, 96, 0}, Mask: []byte{255, 255, 248, 0}}, IPInfo{cloud: "GCP", region: "us-central1"}},
+	// GCP: 34.183.144.0/20, region: us-central1
+	{&net.IPNet{IP: []byte{34, 183, 144, 0}, Mask: []byte{255, 255, 240, 0}}, IPInfo{cloud: "GCP", region: "us-central1"}},
 	// GCP: 34.184.16.0/22, region: us-central1
 	{&net.IPNet{IP: []byte{34, 184, 16, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "GCP", region: "us-central1"}},
 	// GCP: 34.184.40.0/21, region: us-central1
@@ -36481,6 +36691,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{34, 184, 76, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "GCP", region: "us-central1"}},
 	// GCP: 34.184.96.0/21, region: us-central1
 	{&net.IPNet{IP: []byte{34, 184, 96, 0}, Mask: []byte{255, 255, 248, 0}}, IPInfo{cloud: "GCP", region: "us-central1"}},
+	// GCP: 34.184.144.0/20, region: us-central1
+	{&net.IPNet{IP: []byte{34, 184, 144, 0}, Mask: []byte{255, 255, 240, 0}}, IPInfo{cloud: "GCP", region: "us-central1"}},
 	// GCP: 35.184.0.0/16, region: us-central1
 	{&net.IPNet{IP: []byte{35, 184, 0, 0}, Mask: []byte{255, 255, 0, 0}}, IPInfo{cloud: "GCP", region: "us-central1"}},
 	// GCP: 35.188.0.0/17, region: us-central1
@@ -36777,6 +36989,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{34, 183, 60, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "us-east4"}},
 	// GCP: 34.183.68.0/24, region: us-east4
 	{&net.IPNet{IP: []byte{34, 183, 68, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "us-east4"}},
+	// GCP: 34.183.130.0/24, region: us-east4
+	{&net.IPNet{IP: []byte{34, 183, 130, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "us-east4"}},
 	// GCP: 34.184.12.0/22, region: us-east4
 	{&net.IPNet{IP: []byte{34, 184, 12, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "GCP", region: "us-east4"}},
 	// GCP: 34.184.32.0/23, region: us-east4
@@ -36785,6 +36999,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{34, 184, 59, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "us-east4"}},
 	// GCP: 34.184.67.0/24, region: us-east4
 	{&net.IPNet{IP: []byte{34, 184, 67, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "us-east4"}},
+	// GCP: 34.184.130.0/24, region: us-east4
+	{&net.IPNet{IP: []byte{34, 184, 130, 0}, Mask: []byte{255, 255, 255, 0}}, IPInfo{cloud: "GCP", region: "us-east4"}},
 	// GCP: 34.186.32.0/19, region: us-east4
 	{&net.IPNet{IP: []byte{34, 186, 32, 0}, Mask: []byte{255, 255, 224, 0}}, IPInfo{cloud: "GCP", region: "us-east4"}},
 	// GCP: 34.186.64.0/18, region: us-east4
@@ -36839,6 +37055,8 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{8, 234, 4, 0}, Mask: []byte{255, 255, 252, 0}}, IPInfo{cloud: "GCP", region: "us-east5"}},
 	// GCP: 8.234.32.0/19, region: us-east5
 	{&net.IPNet{IP: []byte{8, 234, 32, 0}, Mask: []byte{255, 255, 224, 0}}, IPInfo{cloud: "GCP", region: "us-east5"}},
+	// GCP: 8.237.160.0/19, region: us-east5
+	{&net.IPNet{IP: []byte{8, 237, 160, 0}, Mask: []byte{255, 255, 224, 0}}, IPInfo{cloud: "GCP", region: "us-east5"}},
 	// GCP: 34.1.16.0/20, region: us-east5
 	{&net.IPNet{IP: []byte{34, 1, 16, 0}, Mask: []byte{255, 255, 240, 0}}, IPInfo{cloud: "GCP", region: "us-east5"}},
 	// GCP: 34.4.102.0/23, region: us-east5
@@ -37055,6 +37273,10 @@ var cloudRanges = []rangeEntry{
 	{&net.IPNet{IP: []byte{136, 117, 0, 0}, Mask: []byte{255, 255, 0, 0}}, IPInfo{cloud: "GCP", region: "us-west1"}},
 	// GCP: 136.118.0.0/16, region: us-west1
 	{&net.IPNet{IP: []byte{136, 118, 0, 0}, Mask: []byte{255, 255, 0, 0}}, IPInfo{cloud: "GCP", region: "us-west1"}},
+	// GCP: 179.67.64.0/18, region: us-west1
+	{&net.IPNet{IP: []byte{179, 67, 64, 0}, Mask: []byte{255, 255, 192, 0}}, IPInfo{cloud: "GCP", region: "us-west1"}},
+	// GCP: 179.69.128.0/18, region: us-west1
+	{&net.IPNet{IP: []byte{179, 69, 128, 0}, Mask: []byte{255, 255, 192, 0}}, IPInfo{cloud: "GCP", region: "us-west1"}},
 	// GCP: 2600:1900:4040::/44, region: us-west1
 	{&net.IPNet{IP: []byte{38, 0, 25, 0, 64, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, Mask: []byte{255, 255, 255, 255, 255, 240, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}, IPInfo{cloud: "GCP", region: "us-west1"}},
 	// GCP: 2600:1902:290::/44, region: us-west1
